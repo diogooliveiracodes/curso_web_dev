@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color: white;
+}
+.destaque {
+    font-size: 1em;
+    font-weight: bold;
+}
+#importante {
+    color: yellow;
+    font-size: 0.8em;
+}
+.titulo {
+    text-align: center;
+}
+.cor-vermelha {
+    color: red;
+}
