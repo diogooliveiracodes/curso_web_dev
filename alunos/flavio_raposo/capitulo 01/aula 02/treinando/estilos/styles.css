@@ -1,0 +1,25 @@
+.cor-verde{
+    color:green;
+    font-weight: bold;
+}
+
+h1{
+    color:rgb(66, 8, 73);
+    font-family: Arial;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    color:red;
+  font-size: 2em;
+}
+
+body{
+    background-color: aquamarine;
+
+}
+
+a{
+    color:darkblue;
+}
