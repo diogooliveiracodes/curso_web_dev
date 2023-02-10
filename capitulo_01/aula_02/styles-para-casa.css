@@ -1,0 +1,10 @@
+body {
+    background-color: rgba(234, 9, 9, 0.97);
+    font-weight: bold;
+}
+
+.cor-vermelha{
+
+    color: rgb(red, green, blue);
+    font-size: 15px;
+}
