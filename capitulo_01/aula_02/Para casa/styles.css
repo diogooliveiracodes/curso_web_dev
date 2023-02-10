@@ -1,0 +1,25 @@
+/*body{
+    color: black;
+    font-size: 1em;
+    font: arial;
+}
+*/
+
+.destaque{
+          color: red;
+          font-size: 1.2em;
+          font: arial;
+          font-weight: bold;
+}
+
+#importante{
+    color: yellow;
+    font-size: 0.8em;
+    font: arial;
+}
+
+.comum{
+    color: blue;
+    font-size: 1em;
+    font: arial;
+}
