@@ -1,0 +1,164 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	background-color: #979797;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+header {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@keyframes image {
+	from {
+		transform: rotate(3060deg) scale(2);
+	}
+	to {
+		transform: rotate(0deg) scale(1);
+	}
+}
+
+header img {
+	width: 500px;
+	animation: image 3s;
+}
+
+h1, h4 {
+	-webkit-text-stroke: 1px #ba1011;
+	font-weight: bold;
+	color: #baa800;
+}
+
+header {
+	width: 100%;
+}
+
+header h1 {
+	font-size: 40px;
+}
+
+nav {
+	width: 100%;
+	margin-top: 10px;
+}
+
+nav ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+nav ul li a {
+	font-size: 20px;
+	color: #000;
+}
+
+nav ul li a:hover {
+	-webkit-text-stroke: 0.5px #ba1011;
+	color: #baa800;
+}
+
+section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px 15px;
+	margin-top: 25px;
+}
+
+section h4 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+section {
+	color: #baa800;
+	-webkit-text-stroke: 0.5px #333;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+section p + p {
+	margin-top: 10px;
+}
+
+section ol {
+	margin-left: 20px;
+}
+
+table, th, tr, td {
+	border: 1px solid #baa800;	
+	border-collapse: collapse;
+	color: #000;
+}
+
+table {
+	width: 100%;
+}
+
+th, td {
+	padding: 10px;
+}
+
+form {
+	margin: auto;
+	color: #000;
+	-webkit-text-stroke: none;
+	width: 70%;
+}
+
+.contato p {
+	margin-bottom: 15px;
+}
+
+.contato form .input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.contato form .input-container + .input-container  {
+	margin-top: 15px;
+}
+
+.contato form .input-container input,
+.contato form .input-container textarea {
+	margin-top: 4px;	
+	padding: 5px;
+	border-radius: 5px;
+	flex: 1;
+}
+
+.contato form button {
+	padding: 10px;
+	border-radius: 8px;
+	background-color: #baa800;
+	color: #ba1011;
+	border: 1px solid #ba1011;
+	display: block;
+	width: 150px;
+	margin: 20px auto;
+	font-size: 18px;
+}
