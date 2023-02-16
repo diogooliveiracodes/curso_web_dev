@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: 2px solid black;
+            
+            border-collapse: collapse;
+           
+            text-align: center;
+        }
+        th{
+            height: 40px;
+            border: 1px black;
+        }
+        tr :hover{
+            background-color: darkgray;
+        }
+        tr{
+            align-tracks: auto;
+
+        }
+        #table_head{
+            background-color: aquamarine;
+            font-size: medium;
+            color: black;
+            border: 1px black;
+        }
+        #table_body{
+            background-color: darkslategray;
+            color: aliceblue;
+            
+        }
+        tfoot{
+            background-color: greenyellow;
+        }
+        table{
+            width: 50%;
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead id="table_head">
+            <tr>
+                <th colspan="3" class="titulo1">Tabela de Cadastro</th>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            <tr>
+                <td>Ruan Sousa</td>
+                <td>21</td>
+                <td>Masculino</td>
+            </tr>
+            <tr>
+                <td>Warlem Dias</td>
+                <td>24</td>
+                <td>Masculino</td>
+            </tr>
+            <tr>
+                <td>Isadora Santos</td>
+                <td>18</td>
+                <td>Feminino</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rodape da Tabela</td>
+            </tr>
+        </tfoot>
+
+
+
+
+
+    </table>
+</body>
+</html>

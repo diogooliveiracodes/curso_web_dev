@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            background-color: darkslateblue;
+        }
+        table{
+            table-layout: fixed;
+            width: 50%;
+
+        }
+        th{
+            background-color: brown;
+
+        }
+        
+        .cargo1{
+            background-color: chartreuse;
+        }
+        .cargo2{
+            background-color: chartreuse;
+        }
+    </style>
+
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cargo</th>
+                <th colspan="2">Nome e Sobrenome</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cargo1" rowspan="2">Operador de Maquina</td>
+                    <td colspan="2">Guilherme Silva</td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td colspan="2">Joao Rabelo</td>
+                    
+                </tr>
+                <tr>
+                    <td class="cargo2">Meecanico Automotivo</td>
+                    <td colspan="2">Lucas Pereira</td>
+                    
+                </tr>
+            </tbody>
+
+
+    </table>
+    
+</body>
+</html>
