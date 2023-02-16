@@ -10,6 +10,11 @@
 <body>
     <form>
         <fieldset>
+<<<<<<< HEAD
+=======
+            <legend>Formulário de Contato</legend>
+
+>>>>>>> main
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name"><br>
           
@@ -17,10 +22,47 @@
             <input type="email" id="email" name="email"><br>
           
             <label for="message">Mensagem:</label>
+<<<<<<< HEAD
             <textarea id="message" name="message"></textarea><br>
         </fieldset>
         <br>
         <input type="submit" value="Enviar">
+=======
+            <textarea id="message" 
+                rows="10"
+                name="message"></textarea><br>
+            
+            <p for="termos">Concordo com os termos de uso.</p>
+
+            <label>
+                <input type="radio" 
+                    name="termos" 
+                    id="termos-sim" 
+                    value="1" >
+                Sim
+            </label>
+            <label>
+                <input 
+                    type="radio" 
+                    name="termos" 
+                    id="termos-não" 
+                    value="2" >
+                Não
+            </label>
+
+            <input type="submit" value="Enviar">
+        </fieldset>
+>>>>>>> main
       </form>
+      <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            console.log('Nome: ', form.name.value);
+            console.log('E-mail: ', form.email.value);
+            console.log('Mensagem: ', form.message.value);
+            console.log('Concorda com os termos? ', form.termos.value);
+        });
+      </script>
 </body>
 </html>
