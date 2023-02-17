@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Imagens e multimídia</title>
+</head>
+<body>
+    <!-- IMAGENS -->
+    <div style="background-color: aquamarine;">
+        <!-- importando imagem de uma pasta no mesmo diretório -->
+        <img src="src/img/image.jpg" alt="" width="200" height="200">
+    
+        <div style="width: 50px">
+            <svg style="position: absolute; width: 15px; left: 70px"
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 448 512">
+                <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </div>
+    
+        <!-- importando imagem de uma pasta em um diretório diferente -->
+        <img src="../../src/imagens/aula_06_gato_01.jpg" alt="Imagem de gato" width="200" height="200">.
+    
+        <img 
+            class="gatinho-bonito"
+            width="200"
+            src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic_1926777.jpg" 
+            alt="">
+    </div>
+
+    <!-- Audio -->
+    <div>
+        <audio 
+            controls
+            loop
+            src="src/audio/audio.mp3">
+        </audio>
+    </div>
+
+    <!-- Video -->
+    <div>
+        <video 
+            autoplay
+            muted
+            controls
+            loop
+            src="https://www.w3schools.com/html/mov_bbb.mp4">
+        </video>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uVIifRBlLy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <style>
+        video {
+            width: 100%;
+            display: block;
+            
+        }
+        .gatinho-bonito:hover {
+            width: 250px;
+            opacity: 0.5;
+        }
+        .gatinho-bonito {
+            border-radius: 50%;
+            transition: 1s all ease-in-out;
+        }
+    </style>
+</body>
+</html>
