@@ -6,23 +6,82 @@
 <body>
 
 <table>
-  <thead>
-    <tr>
+  <thead id="table-head">
+    <tr class="tr-titulo">
+      <th colspan="4" class="titulo-tabela">
+        Título da Tabela
+      </th>
+    </tr>
+    <tr class="tr-cabecalho">
       <th>Header 1</th>
       <th>Header 2</th>
+      <th>Header 3</th>
+      <th>Header 4</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>Linha 1, Coluna 1</td>
+  <tbody class="tabela-tbody">
+    <tr class="linha-1">
+      <td rowspan="2">rowspan 2</td>
       <td>Linha 1, Coluna 2</td>
+      <td>Linha 1, Coluna 3</td>
+      <td>Linha 1, Coluna 4</td>
     </tr>
-    <tr>
+    <tr class="linha-2">
       <td>Linha 2, Coluna 1</td>
-      <td>Linha 2, Coluna 2</td>
+      <td>Linha 2, Coluna 2 e 3</td>
+      <td>Linha 2, Coluna 4</td>
+    </tr>
+    <tr class="linha-3">
+      <td>Linha 3, Coluna 1</td>
+      <td colspan="2">colspan 2</td>
+      <td>Linha 3, Coluna 4</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Rodapé da tabela</td>
+    </tr>
+  </tfoot>
 </table>
 
+<style>
+  table {
+    width: 100%;
+  }
+  /* table 
+    tbody 
+      tr 
+        td {
+    background-color: #73e47c;
+  } */
+  /* .linha-1 td {
+    background-color: #73e47c;
+  } */
+  /* tr {
+    border-bottom: 1px solid black;
+  } */
+
+  table, tr, td {
+    border: 1px solid black;
+    margin: 0px;
+    border-collapse: collapse
+
+  }
+  .tabela-tbody {
+    /* background-color: #979595; */
+  }
+  tfoot {
+    /* background-color: #e47373; */
+  }
+  #table-head {
+    /* background-color: #e4e473; */
+  }
+  .titulo-tabela{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 60%;
+  }
+</style>
 </body>
 </html>
