@@ -52,5 +52,3 @@ CDN
 3 - Crie uma tabela HTML com colunas que se ajustam automaticamente ao tamanho do conteúdo usando o atributo 'table-layout:auto'. Certifique-se de que as colunas estão se ajustando corretamente ao conteúdo e que a tabela está sendo exibida de forma responsiva.
 
 4 - Crie uma tabela HTML com células que se estendem por mais de uma linha ou coluna usando o atributo 'colspan' e 'rowspan'. Certifique-se de que as células estão se estendendo corretamente e que a tabela está sendo exibida corretamente.
-
-5 - Crie uma tabela HTML com conteúdo que se expande e contrai dinamicamente usando JavaScript e/ou Jquery. Certifique-se de que o conteúdo está expandindo e contraído corretamente e que a tabela está sendo atualizada corretamente.
