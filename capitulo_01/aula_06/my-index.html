@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aula 06 - Imagens e multimídia</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+
+			body {
+				overflow-x: hidden;
+			}
+
+			video {
+				height: 100vh;
+			}
+
+			audio {
+				position: absolute;
+				top: 0px;
+				right: -10px;
+			}
+			
+			img {
+				transition: 1s;	
+			}
+			
+			img:hover {
+				opacity: 0.6;
+			}
+		</style>
+	</head>
+	<body>
+		<video autoplay muted loop>
+			<source src="/videos/video.mp4" type="video/mp4" />
+		</video>
+
+		<audio loop controls >
+			<source src="/audios/music.mp3" type="audio/mp3" />
+		</audio>
+
+		<img 
+			src="/img/image.jpeg" 
+			alt="Programação" 
+			width="300"
+		/>
+
+		<img 
+			src="/img/image.jpeg" 
+			alt="Programação" 
+			width="300"
+			style="transform: scaleX(-1);"
+		/>
+
+		<img 
+			src="http://pm1.narvii.com/6678/68f8a2b58f38d83ad6e71db22d15dc2a18115f67_00.jpg"
+			alt="Nekomamushi" 
+			width="300"
+		/>
+
+		<script>
+			const audio = document.querySelector('audio');
+			if (audio) audio.volume = 0.1;
+		</script>
+	</body>
+</html>
