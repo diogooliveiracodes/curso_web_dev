@@ -1,0 +1,22 @@
+form{
+    background-color: rgb(87, 94, 75);
+    width: 50%;
+    border: solid black 2px;
+}
+fieldset{
+    
+    border: solid rgb(156, 9, 9);
+    text-align: center;
+    
+}
+legend{
+    color: rgb(5, 5, 114);
+}
+button{
+    background-color: aqua;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 10px;
+}

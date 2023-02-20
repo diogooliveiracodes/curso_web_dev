@@ -1,0 +1,33 @@
+fieldset{
+    margin-left: 50px;
+    font-size: 1.2em;
+    width: 50%;
+    border: none;
+}
+button{
+    border: none;
+    color: maroon;
+    background-color: darkseagreen;
+    border-radius: 5px;
+    margin-left: 50px;
+    cursor: pointer;
+    padding: auto;
+
+    
+}
+form{
+    
+    border-collapse: collapse solid blue;
+
+}
+legend{
+    font-size: 1.3em;
+    color: darkslategrey;
+}
+#name{
+    border-color: blue;
+    
+}
+#senha{
+    border-color: blue;
+}

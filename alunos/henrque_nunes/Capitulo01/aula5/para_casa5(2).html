@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Casa5.2</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <form action="action_page1.html" target="_blank" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Formulario de inscriçao</legend>
+            <label for="name">Nome</label>
+            <input name="name" type="text" placeholder="Nome" required>
+            <br>
+            <label for="sobrename">Sobrenome</label>
+            <input type="text" name="sobrename" placeholder="Sobrenome" required>
+
+        </fieldset>
+
+        <fieldset >
+            <legend>Email</legend>
+            <label for="email">Email</label>
+            <input type="Email" name="email" placeholder="Email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Data e Hora de Nascimento</legend>
+            <label for="nascimento">Data</label>
+            <input type="date" name="nascimento">
+            <br>
+            <label for="hora">Hora</label>
+            <input type="time" name="hora">
+        </fieldset>
+
+        <fieldset>
+            <legend>Gênero</legend>
+            <label for="">Genero</label>
+            <select name="" id="">
+                <option value=""></option required>
+                <option value="1">Masculino</option>
+                <option value="2">Feminino</option>
+                <option value="3">Outros</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Nivel de experiencia</legend>
+            <label for="nivel">Iniciante</label>
+            <input type="radio" name="nivel" required>
+            <br>
+            <label for="nivel">Intermediario</label>
+            <input type="radio" name="nivel" required>
+            <br>
+            <label for="nivel">Intermediario</label>
+            <input type="radio" name="nivel" required>
+        </fieldset>
+        
+        <button type="submit">Enviar</button>
+        
+    </form>
+    
+</body>
+</html>

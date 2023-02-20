@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Casa5.3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        fieldset{
+            margin-left: 20px;
+        }
+        button{
+            margin-left: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="action_page1.html" target="_blank" method="post" enctype="multipart/form-data">
+        
+        <fieldset>
+            <legend>Formulario de Avaliaçao </legend>
+            <label for="name">Nome</label>
+            <input name="name" type="text" placeholder="Nome" required>
+            <br>
+            <label for="sobrename">Sobrenome</label>
+            <input type="text" name="sobrename" placeholder="Sobrenome" required>
+            
+        </fieldset>
+        
+        <fieldset >
+            <legend>Email</legend>
+            <label for="email">Email</label>
+            <input type="Email" name="email" placeholder="Email" required>
+        </fieldset>
+        <fieldset>
+            <legend>Nota</legend>
+            <label for="nivel">1</label>
+            <input type="radio" name="nivel" required>
+            <br>
+            <label for="nivel">2</label>
+            <input type="radio" name="nivel" required>
+            <br>
+            <label for="nivel">3</label>
+            <input type="radio" name="nivel" required>
+            <br>
+            <label for="nivel">4</label>
+            <input type="radio" name="nivel" required>
+            <br>
+            <label for="nivel">5</label>
+            <input type="radio" name="nivel" required>
+        </fieldset>
+        
+
+        <fieldset>
+            <legend>Comentarios e sugestoes</legend>
+            <label  for="mensagem"></label required>
+            <textarea placeholder="Adicione um comentario" name="mensagem" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        
+        <button type="submit">Enviar</button>
+        
+    </form>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
