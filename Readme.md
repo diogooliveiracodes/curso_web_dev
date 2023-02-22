@@ -7,8 +7,8 @@
 - Aula 4: Trabalhando com tabelas (13 de fevereiro - segunda-feira).
 - Aula 5: Formulários e entrada de dados (15 de fevereiro - quarta-feira).
 - Aula 6: Imagens e multimídia (17 de fevereiro - sexta-feira).
-- Aula 7: Criando links e navegando entre páginas (20 de fevereiro - segunda-feira).
-- Aula 8: Aprimorando o layout com o CSS avançado (22 de fevereiro - quarta-feira).
+- Aula 7: Criando links e navegando entre páginas (22 de fevereiro - quarta-feira).
+- Aula 8: Aprimorando o layout com o CSS avançado (23 de fevereiro - quinta-feira).
 - Aula 9: Integrando o HTML com outras linguagens (24 de fevereiro - sexta-feira).
 - Aula 10: Publicando e gerenciando seu site (27 de fevereiro - segunda-feira).
 
