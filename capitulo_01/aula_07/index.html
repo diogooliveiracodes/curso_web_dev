@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        div {
+            margin-top: 500px;
+            height: 600px;
+            background-color: #ccc;
+            margin: 10px;
+        }
+        nav {
+            height: 50px;
+            width: 300px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: calc(50% - 50px);
+            background-color: #0c0707;
+        }
+        a {
+            text-decoration: none !important;
+            color: white;
+            padding: 10px;
+        }
+    </style>
     <title>Aula 07 - Links</title>
 </head>
 <body>
-    
+    <nav>
+        <a href="#div1">DIV 01</a>
+        <a href="#div2">DIV 02</a>
+        <a href="#div3">DIV 03</a>
+        <br>
+        <!-- <a href="http://189.58.88.103:8000/pages/page_03.php#div2">LINK EXTERNO</a> -->
+      </nav>
+    <div id="div1">
+        <h1>Div 01</h1>
+    </div>
+    <div id="div2">
+        <h1>Div 02</h1>
+    </div>
+    <div id="div3">
+        <h1>Div 03</h1>
+    </div>
 </body>
 </html>
