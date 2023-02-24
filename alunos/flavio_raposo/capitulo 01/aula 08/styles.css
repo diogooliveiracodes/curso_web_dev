@@ -1,0 +1,142 @@
+body,
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.bloco-1,
+.bloco-2,
+.bloco-3,
+.bloco-4,
+.bloco-5,
+.bloco-6,
+.bloco-7,
+.bloco-8,
+.bloco-9,
+.bloco-10,
+.bloco-3-flex {
+  /* width: 20vw; */
+  /* width: 30%; */
+  height: 20vh;
+  /* margin: 10px; */
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* FLEX-BOX */
+.container {
+  /* height: 100vh; */
+  border: 4px solid red;
+
+  /* define o tipo de display do elemento */
+  display: flex;
+
+  /* define o eixo principal */
+  flex-direction: row;
+
+  /* alinha os elementos no eixo principal */
+  justify-content: center;
+
+  /* alinha os elementos no eixo secundário */
+  /* align-items: center; */
+
+  /* define o comportamento de quebra de linha */
+  flex-wrap: wrap;
+
+  /* Define o espaço entre os elementos */
+  gap: 20px 10px; /* medida absoluta */
+  /* gap: 5vw; medida relativa */
+  /* row-gap: 20px;
+    column-gap: 10px; */
+
+  align-content: center;
+}
+
+.bloco-3-flex{
+    display: flex;
+    justify-content: center;
+    color: black;
+    flex-direction: column;
+    padding: 4px;
+}
+.bloco-3-1, .bloco-3-2, .bloco-3-3{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+/* RESPONSIVIDADE */
+
+/* CELULAR */
+@media screen and (max-width: 300px) {
+    .bloco {
+        width: 100vw;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 301px) and (max-width: 800px) {
+    .bloco {
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .bloco {
+        width: 30vw;
+    }
+}
+
+
+/* NÃO PRECISA SE PREOCUPAR DAQUI PARA FRENTE */
+
+
+.bloco-1 {
+  background-color: rgb(10, 230, 238);
+
+}
+
+.bloco-2 {
+  background-color: rgb(146, 185, 146);
+
+}
+
+.bloco-3 {
+  background-color: rgb(5, 5, 36);
+}
+
+.bloco-4 {
+  background-color: yellow;
+  color: #000;
+}
+
+.bloco-5 {
+  background-color: rgb(233, 17, 233);
+}
+
+.bloco-6 {
+  background-color: rgb(228, 182, 98);
+}
+
+.bloco-7 {
+  background-color: rgb(136, 58, 123);
+  color: #000;
+}
+
+.bloco-8 {
+  background-color: rgb(104, 10, 10);
+}
+
+.bloco-9 {
+  background-color: rgba(75, 68, 68, 0.795);
+}
+
+.bloco-10 {
+    background-color: rgb(36, 248, 8);
+  }
