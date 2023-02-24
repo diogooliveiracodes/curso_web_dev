@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Casa Aula 05 - Exercício 01</title>
+</head>
+<body>
+    <form action="https://d21.agency" method="get">
+        <fieldset>
+            <legend>Nome</legend>
+            <input type="text" name="nome" id="nome">
+        </fieldset>
+        <fieldset>
+            <legend>Email</legend>
+            <input type="email" name="email" id="email">
+        </fieldset>
+        <fieldset>
+            <legend>Assunto</legend>
+            <input type="text" name="assunto" id="assunto">
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea 
+                name="mensagem" 
+                id="" 
+                cols="30" 
+                rows="10">
+            </textarea>
+        </fieldset>
+        <button type="submit" value="Enviar" class="botao-enviar">Enviar</button>
+    </form>
+
+    <style>
+        input, textarea, button{
+            width: 100%;
+        }
+        .botao-enviar{
+            background-color: #3c8f0c;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</body>
+</html>
