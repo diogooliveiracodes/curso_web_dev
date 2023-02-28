@@ -1,0 +1,1 @@
+Ver para casa aula_03 Todas as atividades solicitadas  (estilizazação da Navbar, links para paginas externas) foram realizados no projeto). 
