@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca Cep</title>
+
+    <style>
+        input{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="border: 1px solid black; padding: 5px;">
+        <legend>Busca CEP</legend>
+
+        <!-- CEP -->
+        <label for="">CEP:</label>
+        <input type="text" name="cep" id="cep" maxlength="8">
+
+        <br>
+
+        <!-- RUA -->
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua">
+
+        <br>
+
+        <!-- CIDADE -->
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade">
+
+        <br>
+
+        <!-- BOTÃO -->
+        <button type="button" onclick="buscar()">Buscar</button>
+    </fieldset>
+    <div id="resultado"></div>
+    <script>
+        function buscar(){
+            let cep = document.getElementById("cep").value;
+            let url = `https://viacep.com.br/ws/${cep}/json`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => preencherDados(data))
+        }
+
+        function preencherDados(dados) {
+            document.getElementById('rua').value = dados.logradouro
+            document.getElementById('cidade').value = dados.localidade
+        }
+
+        // function preencherDados(dados) {
+        //     let resultado = document.getElementById("resultado");
+        //     resultado.innerHTML = `
+        //         <p>CEP: ${dados.cep}</p>
+        //         <p>logradouro: ${dados.logradouro}</p>
+        //         <p>bairro: ${dados.bairro}</p>
+        //         <p>localidade: ${dados.localidade} - ${dados.uf}</p>
+        //     `;
+        // }
+    </script>
+
+</body>
+</html>
