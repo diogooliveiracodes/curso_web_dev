@@ -25,12 +25,9 @@ Explicar o que é Grid e como ele pode ser usado para criar layouts de grade ava
 Explicar como usar transições e animações para criar efeitos visuais suaves e interativos. Mostrar exemplos de como usar as propriedades de transição e animação para criar efeitos como hover, scroll e clique.
 
 ## Exercícios práticos:
-1 - Crie uma página HTML simples com três caixas. Use posicionamento absoluto para posicionar cada caixa em diferentes posições na tela. Certifique-se de que as caixas estão posicionadas corretamente e que os elementos ao redor delas estão reagindo adequadamente.
 
-2 - Crie uma página HTML simples com uma lista de itens. Use display: inline-block para transformar cada item em um bloco inline. Certifique-se de que os itens estão alinhados corretamente e que o espaçamento entre os itens está correto.
+1 - Crie uma página HTML simples com um container e três caixas dentro dele. Use flexbox para alinhar as caixas no centro do container e distribuí-las uniformemente. Certifique-se de que as caixas estão alinhadas e distribuídas corretamente.
 
-3 - Crie uma página HTML simples com um container e três caixas dentro dele. Use flexbox para alinhar as caixas no centro do container e distribuí-las uniformemente. Certifique-se de que as caixas estão alinhadas e distribuídas corretamente.
+2 - Crie uma página HTML simples com um container e três caixas dentro dele. Use grid para criar uma grade com duas colunas e três linhas. Posicione cada caixa em uma célula específica da grade. Certifique-se de que as caixas estão posicionadas corretamente na grade.
 
-4 - Crie uma página HTML simples com um container e três caixas dentro dele. Use grid para criar uma grade com duas colunas e três linhas. Posicione cada caixa em uma célula específica da grade. Certifique-se de que as caixas estão posicionadas corretamente na grade.
-
-5 - Crie uma página HTML simples com um botão. Adicione uma transição para mudar a cor do botão quando o mouse estiver sobre ele. Adicione também uma animação para fazer o botão crescer quando clicado. Certifique-se de que as transições e animações estão funcionando corretamente.
+3 - Replique as atividades apresentadas durante a aula.
