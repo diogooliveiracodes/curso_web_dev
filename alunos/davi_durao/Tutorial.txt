@@ -1,0 +1,13 @@
+Numero 1:
+Fazer o para casa
+
+Numero 2:
+- Atualizando branch "davi_durao" com a branch "main"
+git switch main
+git pull
+git switch davi_durao
+git merge main
+- Subir suas alteraçoes locais para o github
+git add .
+git commit -am "nome do para casa"
+git push
