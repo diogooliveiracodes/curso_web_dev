@@ -3,10 +3,10 @@ Fazer o para casa
 
 Numero 2:
 - Atualizando branch "davi_durao" com a branch "main"
-git switch main
-git pull
+git switch main ( apenas troca para branch main)
+git pull( puxa o que tem no github)
 git switch davi_durao
-git merge main
+git merge main ( puxa o que tem na main para minha branch)
 - Subir suas alteraçoes locais para o github
 git add .
 git commit -am "nome do para casa"
