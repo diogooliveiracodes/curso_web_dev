@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para casa aula 02</title>
+</head>
+<body>
+    <h1 class="titulo">Para casa 02</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum quia tempora quas possimus quibusdam iure ab minima cupiditate quo. Culpa sunt vero id assumenda quaerat natus facere recusandae architecto fugiat.</p>
+    <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta rem vero voluptatem in. Ea sed explicabo odio labore optio iusto blanditiis praesentium, sequi consectetur architecto nulla velit nobis quae? Rerum?</p>
+    <P id="importante">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nulla! Aut nostrum iure earum voluptate consectetur soluta amet molestiae necessitatibus quam quod excepturi aspernatur sint officia quasi cumque, optio repellendus.</P>
+</body>
+<style>
+    body{
+        
+        background-color: blue;
+        color: white;
+        font-family: Arial;
+        font-weight: 1em;
+    }
+    .destaque{
+    
+        color: red;
+        font-weight: 1.2em;
+        font-family: Arial;
+    }
+    #importante{
+
+    color:yellow;
+    font-weight: 0.8em;
+    font-family: Arial;
+    }
+    .titulo{
+        
+        text-align: center;
+        font-family: 'Times New Roman';
+    }
+    
+</style>
+</html>
