@@ -20,3 +20,15 @@
 
 // 7. Imprima a primeira lista através da segunda lista
     console.log(lista2)
+
+
+// 08
+var funcionarios = {
+    samuel: 'Infra.Ti',
+    danielFer: 'Gerente de T.i',
+    danielOliver: 'Programador ADVPL',
+    edvan: 'Suporte de T.i',
+    luizAmado: 'Infra.Ti',
+  }
+  
+  console.log(funcionarios)
