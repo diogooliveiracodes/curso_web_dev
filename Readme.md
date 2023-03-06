@@ -10,11 +10,11 @@
 - Aula 7: Criando links e navegando entre páginas (22 de fevereiro - quarta-feira).
 - Aula 8: Aprimorando o layout com o CSS avançado (23 de fevereiro - quinta-feira).
 - Aula 9: Integrando o HTML com outras linguagens (24 de fevereiro - sexta-feira).
-- Aula 10: Publicando e gerenciando seu site (27 de fevereiro - segunda-feira).
+- Aula 10: Introdução ao Javascript (27 de fevereiro - segunda-feira).
 
 ## Capítulo 02 - Javascript (01 de março até 31 de março) - 14 aulas
-- Aula 11: Introdução ao JavaScript (1 de março - quarta-feira)
-- Aula 12: Variáveis e tipos de dados (3 de março - sexta-feira)
+- Aula 11: Variáveis e tipos de dados (1 de março - quarta-feira)
+- Aula 12: Listas, Objetos e operações básicas (3 de março - sexta-feira)
 - Aula 13: Operadores e expressões (6 de março - segunda-feira)
 - Aula 14: Estruturas de controle de fluxo (8 de março - quarta-feira)
 - Aula 15: Estruturas de Repetição (10 de março - sexta-feira)
