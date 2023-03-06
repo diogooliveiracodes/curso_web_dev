@@ -22,13 +22,26 @@
     console.log(lista2)
 
 
-// 08
+// 08.1
 var funcionarios = {
     samuel: 'Infra.Ti',
     danielFer: 'Gerente de T.i',
     danielOliver: 'Programador ADVPL',
     edvan: 'Suporte de T.i',
-    luizAmado: 'Infra.Ti',
+    endEmpresa: {
+      rua: 'Av. Dr Emilio de Vasconcelos',
+      numero: 45,
+    },
+    cidadesLojas: ['Sete Lagoas, ', 'Venda Nova', 'Contagem', 'Betim, ', 'Montes Claros, ', 'Patos de Minas. ']
   }
   
-  console.log(funcionarios)
+  /*console.log(funcionarios)*/
+    //8.2
+    funcionarios.samuel = 'Suporte de Infraestrutura'
+    funcionarios.endEmpresa.bairro = 'Centro'
+  
+    //8.3
+    //console.log(funcionarios)//
+  
+    //8.4
+    console.log('A Quantidade de itens na lista é de: '+ Object.keys(funcionarios).length)
