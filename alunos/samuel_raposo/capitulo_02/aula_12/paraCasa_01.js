@@ -1,9 +1,9 @@
 // 1. Crie uma lista com 5 ítens
-    var lista = [`Samuel`, `Sabrina`, `Helena`, `Denia`, `Antonio`, `Marielle`]
+    var lista = ['Samuel', 'Sabrina', 'Helena', 'Denia', 'Antonio', 'Marielle']
     console.log (lista)
 
 // 2. Atribua novos valores a lista
-    lista[0] = `Samuel Raposo`, lista[1] = `Sabrina Mairink`
+    lista[0] = 'Samuel Raposo', lista[1] = 'Sabrina Mairink'
 
 // 3. Imprima a lista no console
     console.log(lista)
@@ -12,14 +12,13 @@
     console.log(lista.length)
 
 // 5. Imprima o índex do ítem de índice 3 da sua lista utilizando o valor atribuído a ele
-    lista[3] = lista[3] + " Junia"
-    console.log(lista[3])
+console.log(lista.indexOf('Denia'))
 
 // 6. Crie uma nova lista e adicione a lista anterior como um ítem dela
     var lista2 = [lista]
 
 // 7. Imprima a primeira lista através da segunda lista
-    console.log(lista2)
+    console.log(lista2[0])
 
 
 // 08.1
@@ -32,10 +31,11 @@ var funcionarios = {
       rua: 'Av. Dr Emilio de Vasconcelos',
       numero: 45,
     },
-    cidadesLojas: ['Sete Lagoas, ', 'Venda Nova', 'Contagem', 'Betim, ', 'Montes Claros, ', 'Patos de Minas. ']
-  }
+    cidadesLojas: ['Sete Lagoas, ', 'Venda Nova', 'Contagem', 'Betim, ', 'Montes Claros, ', 'Patos de Minas. '],
+  },
   
-  /*console.log(funcionarios)*/
+    console.log(funcionarios)
+
     //8.2
     funcionarios.samuel = 'Suporte de Infraestrutura'
     funcionarios.endEmpresa.bairro = 'Centro'
