@@ -37,29 +37,27 @@
 // EXERCÍCIO 03
 // Escrever um programa que utilize variáveis do tipo objeto para representar informações sobre um filme, 
 // como título, diretor, elenco e ano de lançamento. Imprimir essas informações no console.
-{
+
     var filme = {
       titulo: "O poderoso Chefão",
       diretor: "Francis Ford Coppola",
       elenco: ["Marlon Brandon", "Al Pacino", "James Caan"],
       anoLancamento: 1972
-      }
-    };
-    console.log("Titulo: "+ titulo)
-    console.log("Diretor: "+ diretor)
-    console.log("Elenco: "+ elenco)
-    console.log("Ano de Lançamento: " + anoLancamento)
+  };
+    
+    console.log("Titulo: "+ filme.titulo),
+    console.log("Diretor: "+ filme.diretor),
+    console.log("Elenco: "+ filme.elenco),
+    console.log("Ano de Lançamento: " + filme.anoLancamento);
 
 // EXERCÍCIO 04
 // Criar um programa que utilize variáveis do tipo array para armazenar uma lista de 
 // nomes e imprimir essa lista no console.
 {
 
-    var gestores = ['Alan', 'Emerson', 'Junior','Rogerio', 'Lucas', 'Kisley', 'Angelica',
-                   'Margareth', 'Marcos', 'Eduardo Luis', 'Carlos']
+    var gestores = ['Alan', 'Emerson', 'Junior','Rogerio', 'Lucas', 'Kisley', 'Angelica', 'Margareth', 'Marcos', 'Eduardo Luis', 'Carlos']
     
-  
-    console.log("Os gestores da Região Metropolitana são:" + gestores)    
+    console.log("Os gestores da Região Metropolitana são: \n" + gestores)    
   }
   
     
