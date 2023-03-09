@@ -1,0 +1,36 @@
+Assim como o break, o comando continue é uma instrução em JavaScript que pode ser usada dentro 
+de um loop para controlar o fluxo de execução.
+
+Quando o comando continue é encontrado dentro do loop, ele interrompe a execução da iteração 
+atual e passa para a próxima iteração do loop, ignorando qualquer código que estiver abaixo 
+dele dentro da iteração atual.
+
+Aqui está um exemplo de como usar o continue dentro de um loop for:
+
+for (var i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log(i);
+}
+
+Neste exemplo, o loop for é executado dez vezes. Mas quando i atinge o valor de 5, a condição dentro 
+da instrução if é verdadeira, o que faz com que o comando continue seja executado. Como resultado, 
+a execução da iteração atual é interrompida, e a execução continua com a próxima iteração.
+
+A saída deste código será:
+0
+1
+2
+3
+4 <-
+6 <- 
+7
+8
+9
+
+Note que o número 5 não foi impresso na tela, pois a execução da iteração foi interrompida antes de chegar a esse valor.
+
+O continue pode ser usado em qualquer loop (for, while, do-while) e pode ser útil em situações em que você deseja ignorar 
+a execução de um código em uma iteração específica. Por exemplo, você pode usar continue para ignorar a execução de um código 
+em uma iteração que não satisfaça uma determinada condição.
