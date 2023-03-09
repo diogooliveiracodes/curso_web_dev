@@ -1,0 +1,77 @@
+O comando break é uma instrução em JavaScript que pode ser usada para interromper a execução de uma 
+estrutura de controle de fluxo. Ele pode ser usado em loops (for, while e do-while) e em estruturas 
+condicionais (if, switch).
+
+Quando o comando break é executado, o fluxo de execução do programa sai imediatamente da estrutura 
+de controle de fluxo que contém o comando break, e continua a execução do código após a estrutura.
+
+Aqui está um exemplo de como usar o break dentro de um loop for:
+
+for (var i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+  }
+  console.log(i);
+}
+
+Neste exemplo, o loop for é executado dez vezes. Mas quando i atinge o valor de 5, a condição dentro 
+da instrução if é verdadeira, o que faz com que o comando break seja executado. Como resultado, a 
+execução do loop é interrompida, e a execução continua com o código após o loop.
+
+A saída deste código será:
+0
+1
+2
+3
+4
+
+Note que o número 5 não foi impresso na tela, pois a execução do loop foi interrompida antes de chegar a esse valor.
+
+O break também pode ser usado em estruturas condicionais, como no exemplo a seguir usando switch:
+
+var diaDaSemana = 4;
+
+switch (diaDaSemana) {
+  case 0:
+    console.log("Domingo");
+    break;
+  case 1:
+    console.log("Segunda-feira");
+    break;
+  case 2:
+    console.log("Terça-feira");
+    break;
+  case 3:
+    console.log("Quarta-feira");
+    break;
+  case 4:
+    console.log("Quinta-feira");
+    break;
+  case 5:
+    console.log("Sexta-feira");
+    break;
+  case 6:
+    console.log("Sábado");
+    break;
+  default:
+    console.log("Dia da semana inválido");
+    break;
+}
+
+Neste exemplo, o break é usado em cada case para interromper a execução do switch assim que o valor 
+correspondente é encontrado. Se o valor correspondente não for encontrado, a instrução default será executada, 
+e a execução do switch será interrompida com o break correspondente.
+
+Lembrando que o break funcionará apenas para o primeiro laço de repetição imediatamente superior a ele,
+no exemplo abaixo veremos que o break interrompe apenas o laço de repetição inferior,
+mas ele não interrompe o laço superior.
+
+for (var a = 0; a < 10; a++) { //laço superior
+  for (var i = 0; i < 10; i++) { // laço inferior
+    if (i === 2) {
+      break;
+    }
+    console.log('i: '+i);
+    console.log('a: '+a);
+  }
+}

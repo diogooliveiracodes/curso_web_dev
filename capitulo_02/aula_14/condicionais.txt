@@ -1,0 +1,62 @@
+As estruturas de controle de fluxo em JavaScript permitem controlar a execução de um programa baseado em condições. 
+As principais estruturas de controle de fluxo em JavaScript são as seguintes:
+
+
+# if/else: A estrutura if/else é usada para tomar decisões em um programa baseado em uma condição. 
+Por exemplo:
+
+if (x > 10) {
+  console.log("x é maior do que 10");
+} else {
+  console.log("x é menor do que ou igual a 10");
+}
+
+# switch: A estrutura switch é usada para executar diferentes ações com base em diferentes valores. 
+Por exemplo:
+
+switch (diaDaSemana) {
+  case 0:
+    console.log("Domingo");
+    break;
+  case 1:
+    console.log("Segunda-feira");
+    break;
+  case 2:
+    console.log("Terça-feira");
+    break;
+  // E assim por diante
+  default:
+    console.log("Dia da semana inválido");
+    break;
+}
+
+# while/do-while: As estruturas while e do-while são usadas para executar um bloco de código 
+enquanto uma determinada condição for verdadeira. A diferença entre elas é que a estrutura 
+do-while executa o bloco de código pelo menos uma vez, mesmo que a condição seja falsa desde o início. 
+Por exemplo:
+
+while (x < 10) {
+  console.log(x);
+  x++;
+}
+
+do {
+  console.log(x);
+  x++;
+} while (x < 10);
+
+
+# for: A estrutura for é usada para executar um bloco de código um número específico de vezes. 
+Ela inclui uma inicialização, uma condição e uma atualização. 
+Por exemplo:
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+Ao construir estruturas de controle de fluxo em JavaScript, é importante lembrar algumas regras:
+
+- As instruções dentro de uma estrutura de controle de fluxo devem estar entre chaves ({}) para formar um bloco de código.
+- A condição de uma estrutura de controle de fluxo deve ser uma expressão que possa ser avaliada como verdadeira ou falsa.
+- A instrução break é usada para sair de uma estrutura de controle de fluxo.
+- A instrução continue é usada para pular uma iteração de um loop.
+- Uma estrutura de controle de fluxo pode ser aninhada dentro de outra estrutura de controle de fluxo.
