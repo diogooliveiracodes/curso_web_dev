@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13 - Operadores Lógicos</title>
+</head>
+<body>
+    <script>
+        // =============== Operadores Lógicos ===============
+
+        // =============== OPERADOR AND (&&)
+        // var logicos = (true && true) //true
+        // var logicos = (true && false) //false
+        // var logicos = (false && false) //false
+        // var logicos = (false && true) //false
+        // console.log(logicos)
+
+        // Brinquedo de parque:
+        // Regras:
+        // 1) Mais de 15 anos.
+        // 2) Maior que 1,5m.
+
+        var maria = {
+        altura: 1.2,
+        idade: 16
+        }
+        var joao = {
+        altura: 1.8,
+        idade: 14
+        }
+        var pedro = {
+        altura: 1.6,
+        idade: 18
+        }
+        // MARIA NÃO PODE ENTRAR
+        // console.log(maria.idade >= 15 && maria.altura > 1.5) //(true && false)
+
+        //JOÃO NÃO PODE ENTRAR
+        // console.log(joao.idade >= 15 && joao.altura > 1.5) //(false && true)
+
+        //PEDRO PODE ENTRAR
+        // console.log(pedro.idade >= 15 && pedro.altura > 1.5) //(true && true)
+
+        // ===============================================================================
+
+        // =============== OPERADOR OR (||)
+        var logicos = (true || true) //true
+        var logicos = (true || false) //true
+        var logicos = (false || false) //false
+        var logicos = (false || false || true) //true
+        var logicos = (false || true) //true
+        // console.log(logicos)
+
+        // Brinquedo de parque:
+        // Regras:
+        // 1) Mais de 15 anos.
+        // OU
+        // 2) Maior que 1,5m.
+
+        var maria = {
+        altura: 1.2,
+        idade: 16
+        }
+        var joao = {
+        altura: 1.8,
+        idade: 14
+        }
+        var pedro = {
+        altura: 1.6,
+        idade: 18
+        }
+        // MARIA PODE ENTRAR
+        // console.log(maria.idade >= 15 || maria.altura > 1.5) //(true && false)
+
+        //JOÃO PODE ENTRAR
+        // console.log(joao.idade >= 15 || joao.altura > 1.5) //(false && true)
+
+        //PEDRO PODE ENTRAR
+        // console.log(pedro.idade >= 15 || pedro.altura > 1.5) //(true && true)
+
+        // MISTURA DE OPERADORES
+        // var logicos = ( (true || false) && true) //true
+        // var logicos = ( (true || true) && false) //false
+        // var logicos = ( (true || false) && (false || true) ) //true
+        // console.log(logicos)
+
+        // ===============================================================================
+        
+        // =============== OPERADOR NOT (!)
+
+        // var mariazinha = false;
+        // !false = true
+        // if (!mariazinha) console.log('Não Pode Entrar');
+        // if (!mariazinha) {console.log('Não Pode Entrar')};
+        // if (!mariazinha) {
+        //   console.log('Não Pode Entrar')
+        // };
+        // console.log( (!true == false) ) //true
+
+        // ===============================================================================
+
+        // =============== OPERADOR TERNÁRIO
+        // var mariazinha = false;
+
+        // if (mariazinha) {
+        // console.log('verdadeiro')
+        // } else {
+        // console.log('falso')
+        // }
+
+        // mariazinha ? console.log('verdadeiro') : console.log('falso');
+        
+    </script>
+</body>
+</html>

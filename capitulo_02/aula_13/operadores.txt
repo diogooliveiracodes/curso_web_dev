@@ -1,0 +1,22 @@
+Em JavaScript, um operador é um símbolo ou palavra reservada que executa uma operação em um ou mais valores, chamados operandos. 
+Já uma expressão é uma combinação de operadores, operandos e outros elementos que produzem um valor.
+
+Por exemplo, o operador de adição (+) é um operador binário em JavaScript que executa uma operação de adição entre dois operandos. 
+Uma expressão que usa o operador de adição pode ser escrita da seguinte forma:
+
+"var resultado = 5 + 3;"
+
+Neste exemplo, 5 e 3 são os operandos, e o operador + é usado para adicionar esses operandos. A expressão resultante produz o valor 8, 
+que é atribuído à variável resultado.
+
+Outro exemplo é o operador de comparação de igualdade (==), que compara dois valores para verificar se eles são iguais. 
+Uma expressão que usa o operador de comparação de igualdade pode ser escrita da seguinte forma:
+
+"var igual = (5 == 5);" 
+
+Neste exemplo, a expressão verifica se o valor 5 é igual a 5, o que é verdadeiro. 
+O resultado da expressão é o valor booleano true, que é atribuído à variável igual.'
+
+Existem muitos operadores diferentes em JavaScript, incluindo operadores aritméticos (+, -, *, /), 
+operadores de comparação (==, !=, >, <), operadores lógicos (&&, ||, !), entre outros. 
+Expressões mais complexas podem combinar vários operadores e operandos para produzir um resultado mais elaborado.

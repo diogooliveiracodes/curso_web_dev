@@ -1,0 +1,8 @@
+    1. Crie uma lista com 5 ítens
+    2. Atribua novos valores a lista
+    3. Imprima a lista no console
+    4. Imprima a quantidade de ítens da lista
+    5. Imprima o índex do ítem de índice 3 da sua lista utilizando o valor atribuído a ele
+    6. Crie uma nova lista e adicione a lista anterior como um ítem dela
+    7. Imprima a primeira lista através da segunda lista
+    8. Repita os exercícios anteriores agora utilizando Objetos (menos o 3, 6, 7)
