@@ -119,3 +119,23 @@ switch(mes) {
 
 //Para Casa 04
 
+var palavra= 'arara';
+var palavraInvertida = palavra.split("").reverse().join("");
+if (palavra === palavraInvertida){
+  console.log('A palavra '+palavra+ ' é um palíndromo.')
+} else {
+  console.log('Não é palíndromo.')
+}
+
+//Para Casa 05
+var palavra = 'subi no onibus';
+var palavraSemEspaco = palavra.replace(" ","");
+var palavraInvertida = palavraSemEspaco.split("").reverse().join("");
+
+if (palavraSemEspaco === palavraInvertida){
+  console.log('A palavra '+palavra+ ' é um palíndromo.')
+} else {
+  console.log('Não é palíndromo.')
+}
+
+
