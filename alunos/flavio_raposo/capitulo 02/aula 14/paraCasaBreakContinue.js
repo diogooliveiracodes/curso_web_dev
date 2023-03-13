@@ -1,4 +1,4 @@
-//Para Casa 01 - Imprima todos os meses da lista, menos Abril.
+//Para Casa 01 - Imprima todos os meses da lista, menos Abril e Junho.
 
 var meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
