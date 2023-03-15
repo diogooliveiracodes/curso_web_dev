@@ -1,4 +1,4 @@
-# Aula 17 - Objetos
+# Aula 17 - Objetos (Classes)
 
 Objetivos da aula:
 
