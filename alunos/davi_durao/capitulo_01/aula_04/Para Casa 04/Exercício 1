@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h1>Para Casa A</h1>
+    <table>
+        <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+    <td>Douglas</td>
+    <td>Costa</td>
+    <td>53</td>
+</tr>
+<tr>
+    <td>Camila</td>
+    <td>Santos</td>
+    <td>42</td>
+</tr>
+<tr>
+    <td>Jose</td>
+    <td>Egito</td>
+    <td>59</td>
+</tr>
+<tr>
+    <td>Pedro</td>
+    <td>Rocha</td>
+    <td>11</td>
+</tr>
+<tr>
+    <td>Gustavo</td>
+    <td>Carmo</td>
+    <td>22</td>
+</tr>
+    </table>
+    <style>
+        
+        table{
+
+            width: 100%;
+            border: 1px solid;
+        }
+           
+        table, tr, td {
+        border: 1px solid black;
+        margin: 0px;
+        border-collapse: collapse
+}
+        
+    </style>
+<tbody>
+</html>

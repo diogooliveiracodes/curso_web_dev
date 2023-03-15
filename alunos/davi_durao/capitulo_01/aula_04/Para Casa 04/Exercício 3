@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Casa 03</title>
+</head>
+<body>
+   <thead>
+   <tr>
+       <th>titulo 1</th>
+       <th>titulo 2</th>
+       <th>titulo 3</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+       <td> linha1</td>
+       <td> linha1</td>
+       <td> linha1</td>
+   </tr>
+   <tr>
+       <td> linha2</td>
+       <td> linha2</td>
+       <td> linha2</td>
+   </tr>
+   </tbody>
+   <tfoot>
+       <td> A</td>
+       <td> B</td>
+       <td> C</td>
+   </tfoot>
+</table>
+    
+</body>
+</html>
