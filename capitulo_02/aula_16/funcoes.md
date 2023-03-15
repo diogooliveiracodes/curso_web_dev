@@ -55,7 +55,7 @@ var resultado = soma(2, 3); // resultado é 5
 
 ```js
 function criaMultiplicador(n) {
-    return function(x) {
+  return function(x) {
     return n \* x;
   }
 }
