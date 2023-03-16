@@ -19,7 +19,7 @@
 - Aula 14: Estruturas de controle de fluxo (8 de março - quarta-feira)
 - Aula 15: Estruturas de Repetição (10 de março - sexta-feira)
 - Aula 16: Funções  (13 de março - segunda-feira)
-- Aula 17: Objetos - Classes (15 de março - quarta-feira)
+- Aula 17: Orientação a Objetos (15 de março - quarta-feira)
 - Aula 18: Eventos e manipulação do DOM (17 de março - sexta-feira)
 - Aula 19: Eventos e manipulação do DOM 2 (20 de março - segunda-feira)
 - Aula 20: Funções nativas do Javascript (22 de março - quarta-feira)
