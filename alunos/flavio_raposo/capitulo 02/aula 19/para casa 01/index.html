@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Para Casa 01 - Aula 19</title>
+</head>
+<body>
+    <form action="" class="container" id="formulario">
+        <div class="form-group mb-2">
+            <label for="nome">Nome:</label>
+            <input placeholder="Digite o seu nome completo" type="text" name="nome" id="nome" class="form-control">
+            <small id="alert-nome" class="text-danger d-none " >O campo nome deve ser preenchido.</small>
+        </div>
+        <div class="form-group mb-2">
+            <label for="email">E-mail:</label>
+            <input placeholder="Digite o seu e-mail" type="email" name="email" id="email" class="form-control">
+            <small id="alert-email" class="text-danger d-none">O e-mail deve ser preenchido.</small>
+        </div>
+        <div class="form-group mb-2">
+            <label for="telefone">Telefone:</label>
+            <input placeholder="Digite o seu telefone" type="number" name="telefone" id="telefone" class="form-control">
+            <small id="alert-telefone" class="text-danger d-none">O telefone deve ser preenchido.</small>
+        </div>
+
+        <button class="btn btn-warning">Enviar Dados</button>
+    </form>
+</body>
+</html>
