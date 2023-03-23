@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Casa 01</title>
+    <script src="scripts.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+     <form action="" class="container" id="formulario"></form>
+            <div class="form-group mb-2"> 
+                <label type ='name' id="nome"> Nome </label>
+                <input
+                    placeholder="Digite seu Nome"
+                    type="name" name="nome" id="nome" class="form-control">
+                <small id="alert-email"
+                class="text-danger d-none" >O campo Nome é obrigatório</small>
+            </div>
+            <div class="form-group mb-2">
+                <label type="email" nome ="email" id="email"> Email</label>
+                <input 
+                    placeholder="Digite seu Email"
+                    type="email" name="email" id="email" class="form-control" >
+                <small id="alert-email"
+                class="text-danger d-none"> O campo de Email é obrigatório</small>    
+            </div>
+            <div class="form-group mp-2">
+                <label type ="number" nome="numero" id="numero"> Telefone </label>
+                <input
+                placeholder="Digite seu Telefone" 
+                type="tel" nome="numero" id="numero" class="form-control">                    
+            </div>
+    </form>
+</body>
+</html>
+
