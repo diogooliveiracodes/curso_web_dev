@@ -22,6 +22,10 @@ function validarFormulario(event) {
     !cep ? alertaCep.classList.remove('d-none'): alertaCep.classList.add('d-none')
     !rua ? alertaRua.classList.remove('d-none'):alertaRua.classList.add('d-none')
     !bairro ? alertaBairro.classList.remove('d-none'):alertaBairro.classList.add('d-none')
+
+    if (nome && cep && rua && bairro){
+      confirm('Dados enviados com sucesso!')
+    }
        
 }
 
@@ -30,6 +34,10 @@ function buscarCep() {
   const url = `https://viacep.com.br/ws/${cep}/json/`;
   const alertaRua = document.getElementById('alert-rua')
   const alertaBairro = document.getElementById('alert-bairro')
+
+  if (cep.length <= 7 || cep.length >= 9) {
+    alert('CEP '+cep+ ' Inválido!!! Informe apenas números.')
+  }
 
   fetch(url)
     .then(response => response.json())
@@ -42,6 +50,7 @@ function buscarCep() {
       if (!data.logradouro) {
         alert('CEP '+cep+ ' Inválido!!!')
       }
+    
     })
     .catch(error => {
       console.log(error);
