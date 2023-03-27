@@ -1,0 +1,36 @@
+// EXERCÍCIO 1
+var numero1 = 1; 
+var numero2 = 2;
+var soma = numero1 + numero2
+console.log(soma)
+var subtracao = numero1 - numero2
+console.log(subtracao)
+var multiplicacao = numero1 * numero2
+console.log(multiplicacao)
+var divisao = numero1 / numero2
+console.log(divisão)
+
+// EXERCÍCIO 2
+var nome = 'Davi'
+var sobrenome = 'Durão'
+var idade = 35;
+console.log(nome, sobrenome, idade)
+
+// EXERCÍCIO 3
+var filme = {
+    titulo: "Os Aventureiros do Bairro Proibido",
+    diretor: "John Carpenter",
+    elenco:  
+      "Kurt Russell, Kim Cattrall, Dennis Dun",
+    ano: 1986
+    
+      };
+  console.log(filme.titulo)
+  console.log(filme.diretor)
+  console.log(filme.elenco)
+  console.log(filme.ano)
+
+//   EXERCÍCIO 4
+var paises = "Brasil, Argentina, Chile, Equador"
+console.log(paises)
+
