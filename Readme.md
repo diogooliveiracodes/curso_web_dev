@@ -23,9 +23,9 @@
 - Aula 18: Eventos e manipulação do DOM (17 de março - sexta-feira)
 - Aula 19: Eventos e manipulação do DOM 2 (20 de março - segunda-feira)
 - Aula 20: Funções nativas do Javascript (22 de março - quarta-feira)
-- Aula 21: Requisições assíncronas (24 de março - sexta-feira)
-- Aula 22: Introdução ao TypeScript (27 de março - segunda-feira)
-- Aula 23: Interfaces no TypeScript (29 de março - quarta-feira)
+- Aula 21: Funções nativas do Javascript 2 (24 de março - sexta-feira)
+- Aula 22: Requisições assíncronas (27 de março - segunda-feira)
+- Aula 23: Introdução ao TypeScript (29 de março - quarta-feira)
 - Aula 24: Classes e Herança no TypeScript (31 de março - sexta-feira)
 
 ## Capítulo 03 - PHP - MYSQL (03 de abril até 30 de abril) - 10 aulas
