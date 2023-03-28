@@ -1,0 +1,13 @@
+{
+    "name": "The Dark Knight",
+    "lista": [
+        {
+            "nome": "Batman",
+            "idade": 30
+        },
+        {
+            "nome": "Joker",
+            "idade": 40
+        }
+    ]
+}
