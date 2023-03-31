@@ -1,12 +1,12 @@
 // Requisição Síncrona
 function imprimirConsole() {
     setTimeout(() => 'olá mundo', 1000);
-    // return 'Olá Mundo';	
+    return 'Olá Mundo';	
 }
 
 console.log('início')
 var retorno = imprimirConsole();
-console.log(retorno)
+console.log(retorno) //undefined
 console.log('fim')
 
 // Requisição Assíncrona
