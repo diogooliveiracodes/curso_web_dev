@@ -33,6 +33,7 @@
 - 6- Crie uma classe chamada "Venda" que tenha as propriedades "cliente", "vendedor", "valorTotal", "comissaoVendedor" e "itens". A propriedade "cliente" deve ser um objeto do tipo "Cliente". A propriedade "vendedor" deve ser um objeto do tipo "Funcionario". A propriedade "valorTotal" deve ser um número. A propriedade "comissaoVendedor" deve ser um número. A propriedade "itens" deve ser um ARRAY de objetos do tipo "Produto".
 - 7- Crie uma função para efetuar uma venda.
 - 8- Separe as classes em arquivos diferentes e crie um arquivo chamado "app.ts" para importar as classes e executar a função de venda.
+
 - 9- Crie um namespace chamado "CPF" e crie uma função chamada "validar" que receba um CPF como parâmetro e retorne se ele é válido ou não. Defina o tipo de dados do parâmetro e do retorno da função.
 - 10- Crie um namespace chamado "CNPJ" e crie uma função chamada "validar" que receba um CNPJ como parâmetro e retorne se ele é válido ou não. Defina o tipo de dados do parâmetro e do retorno da função.
 - 11- Adicione uma validação para verificar se o CPF ou CNPJ do cliente é válido.
