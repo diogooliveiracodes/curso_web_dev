@@ -1,39 +1,38 @@
-# Aula 22 - Introdução ao TypeScript
+# Aula 22 - Requisições assíncronas
 
-## Objetivos da aula:
+Objetivos da aula:
 
-- Entender o que é TypeScript e suas vantagens em relação ao JavaScript.
-- Saber como configurar um ambiente de desenvolvimento com TypeScript.
-- Conhecer a sintaxe básica do TypeScript.
+- Entender o conceito de requisições assíncronas em JavaScript.
+- Aprender a trabalhar com requisições assíncronas em JavaScript.
+- Conhecer as técnicas e práticas para trabalhar com requisições assíncronas em JavaScript.
 
-## Introdução ao TypeScript (10 minutos)
+## Introdução (5 minutos)
 
-- Explicar brevemente o que é TypeScript e suas vantagens em relação ao JavaScript.
-- Mostrar exemplos de código em TypeScript e comparar com código equivalente em JavaScript.
+- O professor dará as boas-vindas aos alunos e apresentará o objetivo da aula.
+- Será explicado o que são requisições assíncronas em JavaScript e sua importância na criação de páginas web dinâmicas.
 
-## Configurando o ambiente (15 minutos)
+## Entendendo requisições assíncronas em JavaScript (20 minutos)
 
-- Mostrar como instalar o TypeScript usando npm (Node Package Manager).
-- Mostrar como configurar o arquivo tsconfig.json para o projeto.
-- Explicar o papel do arquivo tsconfig.json na configuração do TypeScript.
+- O professor explicará o conceito de requisições assíncronas em JavaScript.
+- Serão apresentados exemplos de requisições assíncronas usando XMLHttpRequest e Fetch API.
+- Será explicado o que são callbacks e como usá-los em requisições assíncronas.
 
-## Sintaxe básica do TypeScript (30 minutos)
+## Trabalhando com requisições assíncronas em JavaScript (20 minutos)
 
-- Mostrar como declarar variáveis e tipos de dados em TypeScript.
-- Mostrar como criar funções com tipos de parâmetros e retorno definidos.
-- Mostrar como criar classes com propriedades e métodos tipados.
+- O professor mostrará como trabalhar com requisições assíncronas em JavaScript.
+- Serão apresentados exemplos de como fazer requisições assíncronas e como lidar com as respostas.
+- Será explicado como lidar com erros em requisições assíncronas.
 
-## Exemplo prático (5 minutos)
+## Técnicas e práticas para trabalhar com requisições assíncronas em JavaScript (10 minutos)
 
-- Mostrar um exemplo prático de código em TypeScript.
-- Explicar como o TypeScript ajuda a identificar erros de compilação em tempo de desenvolvimento.
+- O professor apresentará as técnicas e práticas para trabalhar com requisições assíncronas em JavaScript.
+- Serão destacadas as melhores práticas para tornar o código mais legível, eficiente e organizado.
 
 ## Conclusão (5 minutos)
 
-- Recapitular os principais pontos abordados na aula.
-- Estimular os alunos a continuar estudando TypeScript e explorar suas possibilidades.
+- Serão relembrados os principais pontos abordados na aula.
 
-## Fontes para estudo:
+## Exercícios (5 minutos)
 
-[Documentação oficial do TypeScript](https://www.typescriptlang.org/docs/)
-[Artigo sobre as vantagens do TypeScript](https://tableless.com.br/typescript-vantagens-e-desvantagens/)
+- O professor apresentará os exercícios da aula.
+

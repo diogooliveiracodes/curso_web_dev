@@ -1,0 +1,28 @@
+PARA CASA:
+
+- IF/ELSE
+1 - Crie um algoritmo que receba um número e diga se ele é par ou ímpar.
+2 - Crie um algoritmo que receba um número e diga se ele é positivo ou negativo.
+3 - Crie um algoritmo que receba um número e diga se ele é maior que 10.
+4 - Crie um algoritmo que receba um número e diga se ele é maior que 10 e menor que 20.
+5 - Crie um algoritmo que receba um número e diga se ele é maior que 10 e menor que 20 ou se ele é 15.
+
+- FOR
+Crie 5 exercícios usando for em javascript
+1 - Crie um algoritmo que receba um número e imprima todos os números pares de 0 até o número inserido.
+2 - Crie um algoritmo que receba um número e imprima todos os números ímpares de 0 até o número inserido.
+3 - Crie um algoritmo que receba um número e imprima todos os números de 0 até o número inserido.
+4 - Crie um algoritmo que receba um número e imprima a tabuada dele de 1 a 10.
+5 - Crie um algoritmo que receba um número e imprima a tabuada dele de 10 a 1.
+
+- SWITCH
+Crie 5 exercícios usando switch em javascript
+1 - Crie um algoritmo que receba um dia da semana e diga se é dia útil ou final de semana.
+2 - Crie um algoritmo que receba um mês e diga quantos dias ele tem.
+3 - Crie um algoritmo que receba um mês e diga em qual trimestre ele está.
+4 - Crie um algoritmo que receba uma string e diga se ela é um palíndromo.
+5 - Crie um algoritmo que receba uma string e diga se ela é um palíndromo ignorando os espaços.
+
+- BREAK E CONTINUE
+1 - Imprima todos os meses da lista, menos Abril.
+2 - crie um jogo de dado que pare se o 3 for sorteado.
