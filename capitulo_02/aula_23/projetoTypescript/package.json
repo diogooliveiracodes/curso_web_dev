@@ -1,0 +1,15 @@
+{
+  "name": "projetotypescript",
+  "version": "1.0.0",
+  "description": "meu primeiro projeto em typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Diogo Oliveira",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "systemjs": "^0.21.5"
+  }
+}

@@ -1,4 +1,4 @@
-# Aula 22 - Introdução ao TypeScript
+# Aula 23 - Introdução ao TypeScript
 
 ## Objetivos da aula:
 
