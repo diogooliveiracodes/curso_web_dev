@@ -1,0 +1,29 @@
+Em JavaScript, existem vários tipos de operadores que podem ser usados para executar diferentes tipos de operações em valores. 
+A seguir estão os principais tipos de operadores em JavaScript:
+
+# Operadores aritméticos: 
+são usados para realizar operações matemáticas básicas, como adição (+), subtração (-), multiplicação (*), divisão (/), módulo (%), 
+incremento (++) e decremento (--).
+
+# Operadores de atribuição: 
+são usados para atribuir valores a variáveis. O operador de atribuição básico é o =, mas também existem operadores compostos de atribuição, 
+como +=, -=, *=, /= e %=, que combinam uma operação aritmética com uma operação de atribuição.
+
+# Operadores de comparação: 
+são usados para comparar valores e retornar um valor booleano (true ou false). Os operadores de comparação incluem == (igual a), 
+!= (diferente de), === (igual a e do mesmo tipo), !== (diferente de ou de tipo diferente), > (maior que), < (menor que), 
+>= (maior ou igual a) e <= (menor ou igual a).
+
+# Operadores lógicos: 
+são usados para combinar valores booleanos e retornar um valor booleano. Os operadores lógicos incluem && (e), || (ou) e ! (negação).
+
+# Operadores bit a bit: 
+são usados para manipular valores binários. Os operadores bit a bit incluem & (E bit a bit), | (OU bit a bit),
+ ^ (OU exclusivo bit a bit), ~ (Negação bit a bit), << (Deslocamento para a esquerda) e >> (Deslocamento para a direita).
+
+# Operadores ternários: 
+são usados para realizar uma operação condicional com base em uma condição. 
+O operador ternário é representado por ?: e é usado em uma expressão condicional que retorna um valor ou outro, dependendo da condição.
+
+Esses são os principais tipos de operadores em JavaScript, e é importante entender como eles funcionam para poder escrever expressões 
+e scripts eficazes.
