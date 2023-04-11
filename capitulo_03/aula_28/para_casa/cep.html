@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Busca CEP</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- VUE CDN -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="app" class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Busca CEP</h3>
+                    <input type="text" name="cep" id="cep" class="form-control">
+                    <button @click="buscaCep" class="btn btn-primary mt-2">Buscar</button>
+                </div>
+                <div v-if="endereco" id="endereco">
+                    <div class="card-body">
+                        <h3>Endereço</h3>
+                        <p>{{ rua }}</p>
+                        <p>{{ bairro }}</p>
+                        <p>{{ cidade }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const { createApp } = Vue
+          
+            createApp({
+              data() {
+                return {
+                    exibir: true,
+                    rua: String,
+                    bairro: String,
+                    cidade: String,
+                    endereco: false
+                }
+              },
+              methods: {
+                async buscaCep() {
+                  const endereco = await fetch('https://viacep.com.br/ws/01001000/json/').then(data => data.json());
+                  this.exibirEndereco(endereco);
+                },
+                exibirEndereco(endereco) {
+                    this.endereco = true;
+                    this.rua = endereco.logradouro;
+                    this.bairro = endereco.bairro;
+                    this.cidade = endereco.localidade;
+                }
+              }
+            }).mount('#app')
+          </script>
+    </body>
+</html>
