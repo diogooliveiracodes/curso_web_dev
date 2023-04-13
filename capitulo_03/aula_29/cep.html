@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app" class="container">
+        <div class="form-group">
+          <label for="">Informe o CEP:</label>
+          <input v-model="cep" type="text" class="form-control" 
+            name="" id="">
+        <button @click="buscaCep" class="btn btn-success mt-2">Update</button>
+        <div class="card text-left mt-2">
+          <div class="card-body">
+            <h4 class="card-title">Rua: {{ rua }}</h4>
+            <p class="card-text">Bairro: {{ bairro }}</p>
+          </div>
+        </div>
+        </div>
+    </div>
+  </body>
+    <script>
+        const { createApp } = Vue
+    
+        createApp({
+        data() {
+            return {
+                cep: 35701268,
+                rua: '',
+                bairro: ''
+            }
+        },
+        methods: {
+            async buscaCep() {
+                const endereco = await fetch('https://viacep.com.br/ws/'+ this.cep +'/json').then(data => data.json());
+                this.exibirEndereco(endereco);
+            },
+            exibirEndereco(endereco) {
+                this.rua = endereco.logradouro;
+                this.bairro = endereco.bairro;
+            }
+        },
+        created() {
+            this.buscaCep();
+        },
+        beforeUnmount() {
+            alert('beforeUnmount')
+        }
+        // updated() {
+        //     alert('Endereço Atualizado!')
+        // }
+        }).mount('#app')
+
+    </script>
+</html>
