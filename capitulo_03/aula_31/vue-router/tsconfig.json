@@ -5,6 +5,10 @@
     "strict": true,
     "jsx": "preserve",
     "moduleResolution": "node",
+<<<<<<< HEAD
+=======
+    "experimentalDecorators": true,
+>>>>>>> e533a7bc678ace2213a5b38289239034cfbb6deb
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

@@ -10,6 +10,10 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+<<<<<<< HEAD
+=======
+    "vue-class-component": "^8.0.0-0",
+>>>>>>> e533a7bc678ace2213a5b38289239034cfbb6deb
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
