@@ -55,4 +55,21 @@ const router = createRouter({
   routes
 })
 
+// router.beforeEach((to, from, next) => {
+//   if (!user.authenticated) {
+//     next('/login')
+//   }
+//   if (!user.hasPermission) {
+//     next('/login')
+//   }
+//   next()
+// })
+
+// router.beforeResolve((to, from, next) => {
+//   if (user.isAdmin) {
+//     next('/dashboard-admin')
+//   }
+//   next()
+// })
+
 export default router
