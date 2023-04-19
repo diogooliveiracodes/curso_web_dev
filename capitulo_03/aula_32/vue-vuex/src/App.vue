@@ -3,19 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-<<<<<<< HEAD
   <router-view/>
-=======
-  <div>
-    <router-view v-slot="{ Component }"> 
-      <transition name="fade" mode="out-in">
-        <component :is="Component" :key="$route.path"/>
-      </transition>
-    </router-view>
-  </div>
-
-  <!-- <HomeView msg="Outra coisa" /> -->
->>>>>>> main
 </template>
 
 <style>
@@ -38,12 +26,5 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
 }
 </style>

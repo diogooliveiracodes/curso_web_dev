@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -18,25 +18,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
-
-// router.beforeEach((to, from, next) => {
-//   if (!user.authenticated) {
-//     next('/login')
-//   }
-//   if (!user.hasPermission) {
-//     next('/login')
-//   }
-//   next()
-// })
-
-// router.beforeResolve((to, from, next) => {
-//   if (user.isAdmin) {
-//     next('/dashboard-admin')
-//   }
-//   next()
-// })
 
 export default router
