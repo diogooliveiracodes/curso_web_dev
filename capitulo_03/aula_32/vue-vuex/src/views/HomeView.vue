@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <h2>Alunos Aprovados:</h2>  
+
+    <p v-for="aluno in store.getters.alunosAprovados" :key="aluno.id">
+      {{ aluno.nome }}
+    </p>
+    <hr>
+    <h2>Alunos Reprovados:</h2>
+    <p v-for="aluno in store.getters.alunosReprovados" :key="aluno.id">
+      {{ aluno.nome }}
+    </p>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { useStore } from 'vuex';
 
 export default defineComponent({
   name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
+  data() {
+    return {
+      store: useStore()
+    }
+  }
 });
 </script>

@@ -3,14 +3,14 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     listaAlunos: [
-      { id: 1, nome: 'João', nota: 7.5 },
-      { id: 2, nome: 'Maria', nota: 8.5 },
-      { id: 3, nome: 'José', nota: 9.5 },
-      { id: 4, nome: 'Ana', nota: 10 },
-      { id: 5, nome: 'Marcos', nota: 5.5 },
+      { nome: 'João', nota: 7.5, endereco:{logradouro: '', cidade: ''}},
+      { nome: 'Maria', nota: 8.5, endereco:{logradouro: '', cidade: ''} },
+      { nome: 'José', nota: 4, endereco:{logradouro: '', cidade: ''} },
+      { nome: 'Ana', nota: 10, endereco:{logradouro: '', cidade: ''} },
+      { nome: 'Marcos', nota: 5.5, endereco:{logradouro: '', cidade: ''} },
     ],
-    contador: 0,
-    logradouro: String
+    // contador: 0,
+    // logradouro: String
   },
   getters: {
     alunosAprovados(state) {
@@ -22,17 +22,30 @@ export default createStore({
   },
   // Mutations são responsáveis por alterar o estado da aplicação(state)
   mutations: {
-    incrementarContador(state, payload) {
-      state.contador += payload
+    alterarNota(state, payload) {
+      state.listaAlunos[payload.index].nota = payload.nota
     },
-    setCep(state, payload) {
-      state.logradouro = payload
+    adicionaEndereco(state, payload) {
+      state.listaAlunos[payload.index].endereco = payload.endereco
     }
+    // incrementarContador(state, payload) {
+    //   state.contador += payload
+    // },
+    // setCep(state, payload) {
+    //   state.logradouro = payload
+    // }
   },
   actions: {
     buscaCep({ commit }, payload) {
-      //faz a requisição para a API do correios
-      // commit('setCep', response.data.logradouro)
+      fetch(`https://viacep.com.br/ws/${payload.cep}/json/`)
+        .then(response => response.json())
+        .then(data => {
+          const dadosAluno = {
+            index: payload.index, 
+            endereco: {logradouro: data.logradouro, cidade: data.localidade}
+          }
+          commit('adicionaEndereco', dadosAluno)
+        })
     }
   },
   modules: {
