@@ -40,7 +40,7 @@
 - Aula 33: Gerenciamento de estado com Vuex 2 (19 de abril - quarta-feira)
 - Aula 34: Gerenciamento de estado com Vuex 3 (24 de abril - segunda-feira)
 - Aula 35: Projeto prático (26 de abril - quarta-feira)
-- Aula 36: Revisão (28 de abril - sexta-feira)
+- Aula 36: Revisão (02 de maio - terça-feira)
 
 ## Capítulo 04 - PHP e MYSQL (01 de maio até 26 de maio) - 12 aulas
 - Aula 37: Introdução ao PHP (02 de maio - terça-feira)

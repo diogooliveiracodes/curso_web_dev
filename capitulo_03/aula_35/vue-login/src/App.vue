@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/products">Produtos</router-link> |
-    <router-link to="/contador">Contador</router-link>
+    <router-link to="/dashboard">Dashboard</router-link> |
+    <router-link to="/login">Login</router-link>
   </nav>
   <router-view/>
 </template>

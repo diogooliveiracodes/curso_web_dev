@@ -1,10 +1,10 @@
 import { createStore } from 'vuex'
-import counterModule from './counter/index'
+import AuthModule from './auth/index'
 import productsModule from './products/index'
 
 export default createStore({
   modules: {
-    counter: counterModule,
-    product: productsModule
+    auth: AuthModule,
+    products: productsModule
   }
 })
