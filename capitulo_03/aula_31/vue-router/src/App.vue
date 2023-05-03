@@ -26,8 +26,12 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/curso/modulos">Curso</router-link>
   </nav>
-  <div style="border: 1px solid red; padding: 8px;">
-    <router-view />
+  <div>
+    <router-view v-slot="{ Component }"> 
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.path"/>
+      </transition>
+    </router-view>
   </div>
 
   <!-- <HomeView msg="Outra coisa" /> -->
@@ -76,5 +80,12 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
