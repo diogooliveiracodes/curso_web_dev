@@ -25,9 +25,13 @@
 
 ## Vue CLI
 
+``` vue create primeiro-projeto-vue ```
+
 - Apresentação do Vue CLI como uma ferramenta de linha de comando para a criação de projetos Vue.js
 - Demonstração da instalação e criação de um projeto Vue.js usando o Vue CLI
 - Explicação da estrutura do projeto Vue.js gerado pelo Vue CLI e suas principais pastas e arquivos
+- Instalar os pacotes NPM necessários para o projeto
+``` npm install ```
 
 ## Vue Router
 
