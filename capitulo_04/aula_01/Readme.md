@@ -39,3 +39,8 @@
 - Veremos como conectar o PHP com diferentes bancos de dados, como MySQL, PostgreSQL, etc.;
 - Como realizar consultas, inserções, atualizações e exclusões no banco de dados utilizando o PHP;
 - Exemplos práticos.
+
+### Credenciais Laragon
+- Server host: localhost
+- Username: root
+- Password: (vazio)
