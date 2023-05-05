@@ -1,4 +1,4 @@
-# Aula 37: Introdução ao PHP (02 de maio - terça-feira)
+# Aula 38: Introdução ao PHP (02 de maio - terça-feira)
 
 ## O que é PHP?
 - PHP é uma linguagem de programação server-side;
