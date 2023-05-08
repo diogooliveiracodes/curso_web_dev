@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div id="app" class="container">
+        <div class="row">
+            <div class="col-6 mt-2" v-for="item in itens" :key="item.id">
+                <div class="card text-left">
+                  <div class="card-body">
+                    <h4 class="card-title">{{item.nome}}</h4>
+                    <p class="card-text">{{item.descricao}}</p>
+                    <p class="text-danger">R${{item.preco}}</p>
+                    <button @click="addCarrinho(item)" class="btn btn-success">
+                        Adicionar
+                    </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h2>Carrinho:</h2>
+                <button @click="limparCarrinho" class="btn btn-sm btn-danger mb-2">
+                    Limpar
+                </button>
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="item in carrinho" :key="item.id">
+                        {{item.nome}} - 
+                        <small class="text-danger">R${{item.preco.toFixed(2)}}</small>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h2>Valor total:</h2>
+                <p class="text-danger ">R${{qualquerNome}}</p>
+                <small v-if="freteGratis">Frete Grátis</small>
+            </div>
+        </div>
+      </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+            return {
+                itens: [
+                    { id: 1, nome: 'Caneta', preco: 7.59, descricao: 'Caneta Bic Preta' },
+                    { id: 2, nome: 'Lápis', preco: 3.89, descricao: 'Lápis de cor' },
+                    { id: 3, nome: 'Caderno', preco: 18.30, descricao: 'Caderno 100 folhas'},
+                    { id: 4, nome: 'Borracha', preco: 2.00, descricao: 'Borracha branca'}
+                ],
+                carrinho: []
+            }
+        },
+        methods:{
+            addCarrinho(item){
+                this.carrinho.push(item)
+            },
+            limparCarrinho(){
+                this.carrinho = []
+            }
+        },
+        computed: {
+            qualquerNome(){
+                var valorTotal = 0
+                this.carrinho.forEach(
+                    item => { valorTotal += item.preco}
+                )
+                // for(let i = 0; i < this.carrinho.length; i++){
+                //     valorTotal += this.carrinho[2].preco
+                // }
+                return valorTotal.toFixed(2);
+            },
+            freteGratis() {
+                return this.carrinho.length > 3
+            }
+        },
+        created(){
+            
+        }
+    }).mount('#app')
+
+  </script>
+</html>
