@@ -6,15 +6,18 @@ const cpf = 12345678900;
 // LISTAS
 let lista = [1, 2, 3, 4, 5];
 let lista2 = ["a", "b", [1, 2], { nome: "João", sobrenome: "Silva" }];
+console.log(lista2[1]); // b
 
 // OBJETOS
-let pessoa = {
+var pessoa = {};
+var pessoa = {
   nome: "João",
   sobrenome: "Silva",
   parentes: ["Maria", "Paulo"],
   idade: 30,
   formado: false,
 };
+console.log(pessoa.sobrenome);
 
 // FUNÇÕES
 function soma(a, b) {
@@ -29,6 +32,7 @@ let soma3 = (a, b) => {
   return a + b;
 };
 let soma4 = (a, b) => a + b;
+console.log(soma4(7, 6)); // 13
 
 // LAÇOS DE REPETIÇÃO
 for (let i = 0; i < 10; i++) {
@@ -41,7 +45,12 @@ while (i < 10) {
   i++;
 }
 
-const objeto = { nome: "João", idade: 30, cidade: "São Paulo" };
+// FOREACH
+var objeto = {
+  nome: "João",
+  idade: 30,
+  cidade: "São Paulo",
+};
 for (const chave in objeto) {
   console.log(`${chave}: ${objeto[chave]}`);
 }
