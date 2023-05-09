@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CDN Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CDN Vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+      <div id="vue_app" class="container">
+        <h2>Lista:</h2>
+
+        <!-- INPUT FILTRO -->
+        <div class="form-group">
+          <input v-model="inputFiltroAlunos" type="text" class="form-control" name="filtro" 
+            id="filtro" placeholder="Filtrar alunos por nome">
+        </div>
+
+        <ul class="list-group">
+          <!-- <li v-for="(valor, chave) in listaModulos" :key="chave"
+            class="list-group-item">
+            Chave: {{chave}}, Aulas: {{valor.aulas}}, Duração: {{valor.duracao}}
+          </li> -->
+          <!-- <li v-for="aluno in alunosfiltrados()" :key="aluno.nome"
+            class="list-group-item">
+            Nome: {{aluno.nome}}, Idade: {{aluno.idade}}
+          </li> -->
+          <!-- <div v-for="aluno in listaAlunos" :key="aluno.nome">
+            <li v-if="aluno.idade > 25"
+              class="list-group-item">
+              Nome: {{aluno.nome}}, Idade: {{aluno.idade}}
+            </li>
+          </div> -->
+          <li v-for="aluno in alunosFiltradosPorNome()" :key="aluno.nome"
+            class="list-group-item">
+            Nome: {{aluno.nome}}, Idade: {{aluno.idade}}
+          </li>
+        </ul>
+      </div>
+  </body>
+  <script>
+    const { createApp } = Vue
+  
+    createApp({
+      data(){
+        return {
+          inputFiltroAlunos: '',
+          listaAlunos: [
+            {nome: 'João', idade: 20},
+            {nome: 'Ana', idade: 35},
+            {nome: 'Maria', idade: 25},
+            {nome: 'José', idade: 30},
+          ]
+          // listaModulos: {
+          //   modulo1: {aulas: 23, duracao: "30min"},
+          //   modulo2: {aulas: 20, duracao: "40min"},
+          //   modulo3: {aulas: 15, duracao: "50min"},
+          //   modulo4: {aulas: 10, duracao: "60min"}
+          // }
+        }
+      }, 
+      methods: {
+        alunosfiltrados() {
+          return this.listaAlunos.filter(aluno => aluno.idade > 25)
+        },
+        alunosFiltradosPorNome() { 
+          return this.listaAlunos.filter(aluno => aluno.nome.includes(this.inputFiltroAlunos))
+        }
+      }
+    }).mount('#vue_app')
+  </script>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+    <body>
+        <div id="app" class="container">
+            <div class="row">
+                <div class="col mt-2">
+                    <ul class="list-group">
+                        <li class="list-group-item text-success">
+                            Saldo: R${{contaCorrente.toFixed(2)}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group mt-2">
+              <input v-model="valorSaque" type="number" class="form-control">
+              <button @click="sacar" 
+                class="btn btn-success mt-2">Sacar</button>
+            </div>
+            <div class="row" v-for="item in transacoes">
+                <div class="col mt-2">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row justify-content-beetween">
+                                <small class="text-primary col">
+                                    Valor Anterior: R${{item.valorAntigo.toFixed(2)}}
+                                </small>
+                                <small class="text-danger col">
+                                    Saque: R${{item.saque.toFixed(2)}}
+                                </small>
+                                <small class="text-success col">
+                                    Saldo: R${{item.valorNovo.toFixed(2)}}
+                                </small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    contaCorrente: 1500,
+                    transacoes: [],
+                    valorSaque: 0
+                }
+            },
+            methods: {
+                sacar() {
+                    this.contaCorrente -= this.valorSaque
+                }
+            },
+            watch: {
+                contaCorrente(novoValor, valorAntigo) {
+                    this.transacoes.push(
+                        {
+                            valorAntigo: valorAntigo, 
+                            valorNovo: novoValor, 
+                            saque: this.valorSaque
+                        }
+                    )
+                }
+            }
+        }).mount('#app')
+    </script>
+
+</html>
