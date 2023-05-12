@@ -46,7 +46,7 @@
 <!-- - Aula 37: Introdução ao PHP (02 de maio - terça-feira) -->
 - Aula 38: Introdução ao PHP (03 de maio - quarta-feira)
 - Aula 39: Diferenças de sintaxe entre JS e PHP (05 de maio - sexta-feira)
-- Aula 40: Configurações do php.ini e nginx e docker (08 de maio - segunda-feira)
+- Aula 40: Configurações do php.ini, nginx e docker (08 de maio - segunda-feira)
 - Aula 41: Introdução ao MySQL (10 de maio - quarta-feira)
 - Aula 42: Consultas e operações com o MySQL (12 de maio - sexta-feira)
 - Aula 43: Integrando PHP com MySQL - php PDO (15 de maio - segunda-feira)
