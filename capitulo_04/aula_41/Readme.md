@@ -86,10 +86,4 @@ Permite ordenar os resultados da consulta em uma ordem específica, usando a cl�
 SELECT * FROM alunos ORDER BY nome ASC;
 ```
 
-### - Agrupamento e agregação: 
 
-Usadas para agrupar os dados com base em uma ou mais colunas e realizar operações agregadas, como soma, média, máximo ou mínimo, usando cláusulas GROUP BY e funções de agregação, como SUM, AVG, MAX e MIN.
-
-```sql
-SELECT aluno_id, SUM(nota) AS total FROM notas GROUP BY aluno_id;
-```
