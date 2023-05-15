@@ -14,7 +14,7 @@ CREATE TABLE cursos (
 
 INSERT INTO cursos (id, nome) VALUES (2, 'JAVASCRIPT'), (3, 'PHP');
  
-# CRUD - CREATE READ UPDATE DELETE
+--CRUD - CREATE READ UPDATE DELETE
 
 INSERT INTO alunos (id, email, nome, data_nascimento)
 VALUES 	(2, 'maria@email.com','Maria', '1990-01-01'),
