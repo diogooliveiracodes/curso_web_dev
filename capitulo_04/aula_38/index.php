@@ -19,15 +19,15 @@
     </fieldset>
     <button type="submit">Enviar</button>
 </form>
-<?php
-include './Mysql.php';
+    <?php
+        include './Mysql.php';
 
-$mysql = new Mysql();
-$alunos = $mysql->getAlunos();
+        $mysql = new Mysql();
+        $alunos = $mysql->getAlunos();
 
-foreach ($alunos as $aluno) {
-    echo $aluno['nome'] . '<br>';
-}
-?>
+        foreach ($alunos as $aluno) {
+            echo '<p>'. $aluno['nome'] . '</p>';
+        }
+    ?>
 </body>
 </html>

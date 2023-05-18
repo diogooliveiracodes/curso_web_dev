@@ -1,4 +1,4 @@
-# Aula 37: Introdução ao PHP (02 de maio - terça-feira)
+# Aula 38: Introdução ao PHP (02 de maio - terça-feira)
 
 ## O que é PHP?
 - PHP é uma linguagem de programação server-side;
@@ -39,3 +39,8 @@
 - Veremos como conectar o PHP com diferentes bancos de dados, como MySQL, PostgreSQL, etc.;
 - Como realizar consultas, inserções, atualizações e exclusões no banco de dados utilizando o PHP;
 - Exemplos práticos.
+
+### Credenciais Laragon
+- Server host: localhost
+- Username: root
+- Password: (vazio)
