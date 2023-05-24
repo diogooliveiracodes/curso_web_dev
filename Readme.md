@@ -52,16 +52,19 @@
 - Aula 43: Integrando PHP com MySQL - php PDO (15 de maio - segunda-feira)
 - Aula 44: Utilizando classes para relacionamento com o DB (17 de maio - quarta-feira)
 - Aula 45: Segurança e boas práticas (19 de maio - sexta-feira)
-- Aula 46: Projeto Prático (22 de maio - segunda-feira)
+<!-- - Aula 46: Projeto Prático (22 de maio - segunda-feira)
 - Aula 47: Projeto Prático (24 de maio - quarta-feira)
-- Aula 48: Revisão (26 de maio - sexta-feira)
+- Aula 48: Revisão (26 de maio - sexta-feira) -->
 ## Capítulo 05 - Laravel (29 de maio até 07 de junho) - 6 aulas
-- Aula 49: Introdução ao Laravel (29 de maio - segunda-feira)
-- Aula 50: Diretivas blade (31 de maio - quarta-feira)
-- Aula 51: Controllers (02 de junho - sexta-feira)
-- Aula 52: Rotas (05 de junho - segunda-feira)
-- Aula 53: Migrations, Seeders e Factories (06 de junho - terça-feira)
-- Aula 54: Relacionamentos e ORM (07 de junho - quarta-feira)
+- Aula 46: Introdução ao Laravel (22 de maio - segunda-feira)
+- Aula 47: Diretivas blade (24 de maio - quarta-feira)
+- Aula 48: Controllers (26 de maio - sexta-feira)
+- Aula 49: Rotas (29 de maio - segunda-feira)
+- Aula 50: Migrations, Seeders e Factories (31 de maio - quarta-feira)
+- Aula 51: Relacionamentos e ORM (02 de junho - sexta-feira)
+- Aula 52: Autenticação com Laravel Breeze (05 de junho - segunda-feira)
+- Aula 53: Middlewares (06 de junho - terça-feira)
+- Aula 54: Projeto Prático (07 de junho - quarta-feira)
 
 ## Recesso (12 de junho até 24 de junho)
 
