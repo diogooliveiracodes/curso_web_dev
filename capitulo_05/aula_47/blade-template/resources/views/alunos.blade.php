@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @php
-    $idade = 67;
     $alunos = [
         (object)["nome"=>"Maria", "nota"=>10],
         (object)["nome"=>"José", "nota"=>7],
@@ -18,18 +17,12 @@
 
 @section('content')
 
-    <div class="container mt-2">
-        @foreach ($alunos as $key => $aluno)
-            {{-- @if($aluno->nota < 7)
-                @continue // pula
-                @break // para
-            @endif --}}
-            @if($aluno->nota > 6)
-                <p class="bg-success p-2 text-white"> index: {{$key}}, {{ $aluno->nome }}, {{ $aluno->nota }}</p>
-            @else
-                <p class="bg-danger p-2 text-white">{{ $aluno->nome }}, {{ $aluno->nota }}</p>
-            @endif
-        @endforeach
-    </div>
+<h1 class="mt-3">Lista de Alunos</h1>
+
+@foreach($alunos as $aluno)
+    <x-aluno-componente :message="$aluno->nome">
+        <small>Nota: {{ $aluno->nota }}</small>
+    </x-aluno-componente>
+@endforeach
 
 @endsection

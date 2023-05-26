@@ -15,4 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::get('/entrar', function () {
+    return view('login');
+})->name('login');
+
+Route::post('/entrar', function () {
+    echo 'Entrando...';
+})->name('entrar');
+
+Route::get('/alunos', function () {
+    return view ('alunos');
+})->name('listar.alunos');
