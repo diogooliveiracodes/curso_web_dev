@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Nome</title>
+</head>
+<body>
+    <script>
+        sessionStorage.setItem('nome', 'João');
+    </script>
+    <form method="POST" action="processar.php">
+        <label for="nome">Nome:</label>
+        <!-- <input type="text" name="nome" id="nome"> -->
+        <select name="nome" id="nome">
+            <option value="Alunos">Alunos</option>
+            <option value="Cursos">Cursos</option>
+            <option value="Disciplinas">Disciplinas</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
