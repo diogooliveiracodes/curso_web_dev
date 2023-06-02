@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Artigo extends Model
+class Aluno extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'titulo',
-        'conteudo'
-    ];
-
-    protected $table = 'artigos';
-
+    protected $fillable = ['nome', 'email'];
+    protected $hidden = ['password'];
     protected $connection = 'mysql';
+    protected $table = 'estudantes';
+
 }
