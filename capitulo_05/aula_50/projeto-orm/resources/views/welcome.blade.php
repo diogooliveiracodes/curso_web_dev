@@ -18,9 +18,14 @@
             @if(!empty($aluno->endereco))
                 <p>rua: {{$aluno->endereco->rua}}</p>
             @endif
-            @foreach($aluno->matriculas as $matricula)
+            {{-- @foreach($aluno->matriculas as $matricula)
                 <p>Nº Matrícula: {{$matricula->id}} - {{$matricula->descricao}}</p>
-            @endforeach
+            @endforeach --}}
+            @if(!empty($aluno->cursos))
+                @foreach($aluno->cursos as $curso)
+                    <p>Curso: {{$curso->nome}}</p>
+                @endforeach
+            @endif
         @endforeach
         {{-- @foreach(App\Models\Matricula::all() as $matricula)
             <h1>Matrícula de número: {{$matricula->id}}</h1>

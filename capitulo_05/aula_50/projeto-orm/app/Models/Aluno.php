@@ -22,4 +22,10 @@ class Aluno extends Model
     {
         return $this->hasMany(Matricula::class);
     }
+
+    // Muitos para muitos
+    public function cursos()
+    {
+        return $this->belongsToMany(Curso::class);
+    }
 }

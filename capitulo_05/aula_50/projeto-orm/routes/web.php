@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cursos', function() {
+    $cursos = \App\Models\Curso::all();
+    foreach ($cursos as $curso) {
+        echo "<p>{$curso->id} - {$curso->nome}</p>";
+    }
+});
