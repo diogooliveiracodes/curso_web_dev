@@ -63,8 +63,8 @@
 - Aula 50: Relacionamentos e ORM (31 de maio - quarta-feira)
 - Aula 51: Migrations, Seeders e Factories (02 de junho - sexta-feira)
 - Aula 52: Projeto Prático - Captação de Leads (05 de junho - segunda-feira)
-- Aula 53: Projeto Prático - To Do List (06 de junho - terça-feira)
-- Aula 54: Revisão (07 de junho - quarta-feira)
+- Aula 53: Projeto Prático - Blog (06 de junho - terça-feira)
+- Aula 54: Projeto Prático - Autenticação (07 de junho - quarta-feira)
 
 ## Recesso (12 de junho até 24 de junho)
 
