@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicAccessController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ Route::get('/about', [PublicAccessController::class, 'about'])->name('about');
 Route::get('/contact', [PublicAccessController::class, 'contact'])->name('contact');
 Route::post('/contact', [PublicAccessController::class, 'createContact'])->name('create.contact');
 
+Route::resource('/post',PostController::class);
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,9 @@ class PublicAccessController extends Controller
     
     public function home()
     {
-        return view('publicViews.home');
+       $posts = Post::orderBy('created_at','desc')->get()->take(4);
+       
+        return view('publicViews.home',['posts'=>$posts]);
     }
 
     public function about()
