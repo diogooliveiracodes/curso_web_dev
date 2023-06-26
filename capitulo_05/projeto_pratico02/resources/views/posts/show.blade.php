@@ -1,15 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts Show</title>
-</head>
-<body>
-        <a href="{{route('post.index')}}">Voltar para o início</a>
-        <h2>id: {{$post->id}} - {{$post->title}}</h2> <a href="{{route('post.edit',$post)}}">Editar</a>
-        <p>{{$post->content}}</p>
-        <small>{{$post->created_at}}</small>
-        <small>Autor: {{$post->user->name}}</small>
-</body>
-</html>
+@extends('layouts.public')
+
+@section('content')
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <a>
+                        <h2 class="post-title">{{$post->title}}</h2>
+
+                        <h3 class="post-subtitle">{{$post->content}}</h3>
+                    </a>
+                    <p class="post-meta">
+                        Posted by
+                        <a href="#!">{{$post->user->name}}</a>
+                        on {{$post->created_at}}
+                    </p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+
+            <!-- Pager-->
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{{route('post.index')}}">Voltar →</a></div>
+            @auth
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-secondary text-uppercase"
+                    href="{{route('post.edit', $post)}}">Editar</a></div>
+            @endif
+        </div>
+    </div>
+</div>
+
+@endsection
