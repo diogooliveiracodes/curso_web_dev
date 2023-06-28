@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
+use App\Models\Blog;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -31,14 +33,15 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
+            'blog_name' => ['required', 'string', 'max:15', 'unique:'.Blog::class.',name'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $blog = Blog::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
+            'name' => $request->blog_name,
+            'slug' => Str::slug($request->blog_name)
         ]);
 
         $user = User::create([
