@@ -34,14 +34,15 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
+            'blog_name' => ['required', 'string', 'max:15','unique:'.BlogAula::class.',name'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $blog = BlogAula::create([
-            'name'=>$request->name,
-            'slug'=> Str::slug($request->name)
+            'name'=>$request->blog_name,
+            'slug'=> Str::slug($request->blog_name)
         ]);
         
         
