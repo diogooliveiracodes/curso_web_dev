@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Publication extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     */
     protected $fillable = [
-        'name',
-        'slug'
+        'blog_id',
+        'user_id',
+        'title',
+        'slug',
+        'content',
+        'is_active'
     ];
-
 }
