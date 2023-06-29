@@ -13,7 +13,7 @@ class PublicationController extends Controller
      */
     public function index()
     {
-        $publications - Publication::where('blog_id',auth()->user()->blog->id)
+        $publications = Publication::where('blog_id',auth()->user()->blog->id)
             ->orderBy('created_at','desc')
             ->paginate(10);
 
