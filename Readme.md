@@ -69,10 +69,10 @@
 ## Recesso (12 de junho até 24 de junho)
 
 ## Capítulo 06 - Projeto Full Stack (26 de junho até 31 de julho) - 16 aulas
-- Aula 55: Autenticação com Laravel Breeze (26 de junho - segunda-feira)
-- Aula 56: Autenticação com Laravel Breeze 2 (28 de junho - quarta-feira)
-- Aula 57: Middleware e boas práticas (30 de junho - sexta-feira)
-- Aula 58: Projeto Prático - Painel Administrativo (03 de julho - segunda-feira)
+- Aula 55: Projeto Prático - Blog Multi-tenant 1 (26 de junho - segunda-feira)
+- Aula 56: Projeto Prático - Blog Multi-tenant 2 (28 de junho - quarta-feira)
+- Aula 57: Projeto Prático - Blog Multi-tenant 3 (30 de junho - sexta-feira)
+- Aula 58: Projeto Prático - Blog Multi-tenant 4 (03 de julho - segunda-feira)
 - Aula 59: Projeto Prático - Painel Administrativo 2 (05 de julho - quarta-feira)
 - Aula 60: Projeto Prático - Painel Administrativo 3 (07 de julho - sexta-feira)
 - Aula 61: Inertia (10 de julho - segunda-feira)
