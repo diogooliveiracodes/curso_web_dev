@@ -17,4 +17,9 @@ class Publication extends Model
         'content',
         'is_active'
     ];
+
+    public function blog()
+    {
+        return $this->belongsTo(Blog::class);
+    }
 }
