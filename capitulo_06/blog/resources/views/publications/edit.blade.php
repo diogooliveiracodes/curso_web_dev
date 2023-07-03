@@ -6,7 +6,7 @@
         </h2>
     </x-slot>
 
-    <div class="mx-6">
+    <div class="mx-6 py-2">
         {{-- Form  --}}
         <form action="{{route("publications.update", $publication)}}" method="POST">
             @csrf
@@ -20,17 +20,17 @@
                 <x-input-error :messages="$errors->get('title')" class="mt-2" />
             </div>
             {{-- CONTENT --}}
-            <div>
+            <div class="mt-2">
                 <x-input-label for="content" :value="__('Content')" />
-                <textarea   class="border-gray-300 dark:border-gray-700
+                <textarea
+                    class="w-full border-gray-300 dark:border-gray-700
                     dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500
                     dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600
                     rounded-md shadow-sm'"
                     id="content"
                     rows="10"
-                    type="text" name="content" required autofocus autocomplete="content">
-                    {{ $publication->content }}
-                </textarea>
+                    type="text" name="content" required autofocus autocomplete="content"
+                    >{{ $publication->content }}</textarea>
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
             {{-- BUTTONS --}}

@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+
+    public function publicGetBlog(string $slug)
+    {
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        if ($blog) {
+            $viewName = 'templates.' . $blog->template . '.index';
+            $publications = $blog->publications()
+                ->where('is_active', 1)
+                ->orderBy('created_at', 'desc')
+                ->paginate(10);
+        }
+        return view($viewName, compact('blog', 'publications'));
+    }
+
     /**
      * Display a listing of the resource.
      */
