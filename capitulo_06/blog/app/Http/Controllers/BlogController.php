@@ -21,6 +21,18 @@ class BlogController extends Controller
         return view($viewName, compact('blog', 'publications'));
     }
 
+    public function publicGetPublication(string $blog, string $publication)
+    {
+        $blog = Blog::where('slug', $blog)->firstOrFail();
+        if ($blog) {
+            $publication = $blog->publications()
+                ->where('slug', $publication)
+                ->firstOrFail();
+            $viewName = 'templates.' . $blog->template . '.show';
+        }
+        return view($viewName, compact('blog', 'publication'));
+    }
+
     /**
      * Display a listing of the resource.
      */
