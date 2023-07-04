@@ -17,4 +17,11 @@ class Publication extends Model
         'slug',
         'is_active'
     ];
+
+    public function blog()
+    {
+        return $this->belongsTo(Blog::class);
+    }
 }
+
+

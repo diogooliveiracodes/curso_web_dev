@@ -46,6 +46,6 @@ class User extends Authenticatable
 
     public function blog()
     {
-        return $this->belongsTo(BlogAula::class);
+        return $this->belongsTo(Blog::class);
     }
 }

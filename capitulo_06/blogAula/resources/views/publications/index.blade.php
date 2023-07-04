@@ -17,7 +17,7 @@
     </x-slot>
 
     @foreach($publications as $publication)
-        <div class="py-12">
+        <div class="py-4">
             <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
@@ -25,7 +25,7 @@
                           <a href="{{route('publications.edit', $publication)}}">
                                 <i class="fa fa-edit fa-2x"></i> Edit                               
                           </a>
-                          <form action="{{route('publications.destroy', $publication)}}" method="POST">
+                          <form action="{{route('publications.destroy', $publication)}}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir esta publicação?')">
                                 @csrf
                                 @method('DELETE')
                                 <x-primary-button type="submit">

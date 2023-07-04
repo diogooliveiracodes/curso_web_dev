@@ -30,3 +30,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/{blogs:slug}', [App\Http\Controllers\BlogController::class,'publicGetBlog'])->name('public.get.blog');

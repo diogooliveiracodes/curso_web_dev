@@ -2,11 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BlogAula;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
-class BlogAulaController extends Controller
+class BlogController extends Controller
 {
+    
+    public function publicGetBlog(string $slug)
+    {
+        $blog = Blog::where('slug',$slug)->firstOrFail();
+        if($blog)
+        {
+            $viewname ='templates.'. $blog->template . '.index';
+            $publications = $blog->publications()
+                ->where('is_active',1)
+                ->orderBy('created_at','desc')
+                ->paginate(10);
+        }
+        return view($viewname, compact('blog', 'publications'));
+    }
+    
     /**
      * Display a listing of the resource.
      */
@@ -34,7 +49,7 @@ class BlogAulaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(BlogAula $blogAula)
+    public function show(Blog $blog)
     {
         //
     }
@@ -42,7 +57,7 @@ class BlogAulaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(BlogAula $blogAula)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -50,7 +65,7 @@ class BlogAulaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, BlogAula $blogAula)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -58,7 +73,7 @@ class BlogAulaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(BlogAula $blogAula)
+    public function destroy(Blog $blog)
     {
         //
     }

@@ -17,9 +17,9 @@
             </div>
 
             <!-- Content -->
-            <div>
+            <div class="mt-2">
                 <x-input-label for="content" :value="__('Content')" />
-                <x-text-input id="content" class="block mt-2 w-full" type="text" name="content" :value="old('content')" required autofocus autocomplete="username" />
+                <textarea id="content" class="w-full" type="text" name="content" :value="old('content')" required autofocus autocomplete="username" ></textarea>
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
 

@@ -19,11 +19,9 @@
             </div>
 
             <!-- Content -->
-            <div>
+            <div class="mt-2">
                 <x-input-label for="content" :value="__('Content')" />
-                    <textarea name="content" id="content" cols="225" rows="10">
-                        {{$publication->content}}
-                    </textarea>
+                    <textarea class ="w-full" name="content" id="content" cols="225" rows="10">{{$publication->content}}</textarea>
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
 
