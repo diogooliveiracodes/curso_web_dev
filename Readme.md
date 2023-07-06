@@ -74,7 +74,7 @@
 - Aula 57: Projeto Prático - Blog Multi-tenant 3 (30 de junho - sexta-feira)
 - Aula 58: Projeto Prático - Blog Multi-tenant 4 (03 de julho - segunda-feira)
 - Aula 59: Projeto Prático - Blog Multi-tenant 5 (05 de julho - quarta-feira)
-- Aula 60: Projeto Prático - Painel Administrativo 3 (07 de julho - sexta-feira)
+- Aula 60: Projeto Prático - Blog Multi-tenant 6 (07 de julho - sexta-feira)
 - Aula 61: Inertia (10 de julho - segunda-feira)
 - Aula 62: Autenticação com Inertia (12 de julho - quarta-feira)
 - Aula 63: Projeto prático - Saas (14 de julho - sexta-feira)
