@@ -34,3 +34,5 @@ require __DIR__.'/auth.php';
 
 Route::get('/{slug}', [App\Http\Controllers\BlogController::class, 'publicGetBlog'])
     ->name('public.get.blog');
+Route::get('/{slug}/{publication}', [App\Http\Controllers\BlogController::class, 'publicGetPublication'])
+    ->name('blog.publication.show');

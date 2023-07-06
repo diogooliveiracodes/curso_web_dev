@@ -21,23 +21,18 @@
                     {{Str::upper($blog->name)}}
                 </a>
             </div>
-
-            @foreach($publications as $publication)
             <div class="py-4">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
 
                             <div class="p-6 text-gray-900 dark:text-gray-100">
-                                <a href="{{ route('blog.publication.show', [$blog->slug, $publication->slug] ) }}">
-                                    <h1 class="text-3xl font-bold">{{ $publication->title }}</h1>
-                                </a>
+                                <h1 class="text-3xl font-bold">{{ $publication->title }}</h1>
                                 <p class="text-lg text-gray-600 dark:text-gray-400 mb-2">{{ $publication->content }}</p>
                                 <p class="text-sm text-gray-500 dark:text-gray-300">{{ $publication->created_at }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
         </div>
     </body>
 </html>
