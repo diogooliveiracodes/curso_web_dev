@@ -13,15 +13,27 @@ class BlogController extends Controller
         $blog = Blog::where('slug',$slug)->firstOrFail();
         if($blog)
         {
-            $viewname ='templates.'. $blog->template . '.index';
+            $viewName ='templates.'. $blog->template . '.index';
             $publications = $blog->publications()
                 ->where('is_active',1)
                 ->orderBy('created_at','desc')
                 ->paginate(10);
         }
-        return view($viewname, compact('blog', 'publications'));
+        return view($viewName, compact('blog', 'publications'));
     }
     
+    public function publicGetPublication(string $blog, string $publication)
+    {
+        $blog = Blog::where('slug',$blog)->firstOrFail();
+        if($blog) {
+            $publication = $blog->publications()
+                ->where('slug', $publication)
+                ->firstOrFail();
+            $viewName = 'templates.' . $blog->template . '.show';
+
+        }
+        return view($viewName, compact('blog', 'publication'));
+    }
     /**
      * Display a listing of the resource.
      */
