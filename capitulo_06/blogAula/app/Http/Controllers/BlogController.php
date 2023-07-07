@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     
+    public function updateBlogTemplate(Request $request)
+    {
+       $blog= auth()->user()->blog;
+       $blog->update(
+            [
+                'template' => $request->template
+            ]
+            ); 
+       return redirect()->route('profile.edit')->with('success', 'Template atualizado com sucesso!');
+    }
+
     public function publicGetBlog(string $slug)
     {
         $blog = Blog::where('slug',$slug)->firstOrFail();
