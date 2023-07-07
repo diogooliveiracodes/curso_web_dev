@@ -18,7 +18,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
             <div>
                 <a href="/{{$blog->slug}}" class="p-6 text-gray-900 dark:text-gray-100">
-                    {{Str::upper($blog->name)}} - TEMPLATE CLEAN
+                    {{Str::upper($blog->name)}} - TEMPLATE FULL
                 </a>
             </div>
 
