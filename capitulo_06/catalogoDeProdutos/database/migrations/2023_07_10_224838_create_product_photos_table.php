@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('product_photos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->contrained()->cascadeOnDelete();
+            $table->foreignId('product_id')->contrained()->cascadeOnDelete();
+            $table->string('path');
+            $table->string('name');
             $table->timestamps();
         });
     }

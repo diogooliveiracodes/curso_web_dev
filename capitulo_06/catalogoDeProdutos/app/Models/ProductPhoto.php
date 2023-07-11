@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class ProductPhoto extends Model
 {
     use HasFactory;
+
+        protected $fillable = [
+            'company_id',
+            'product_id',
+            'path',
+            'name',
+        ];
+
+        public function company()
+        {
+            return $this->belongsTo(Company::class);
+        }
+
+        public function products()
+        {
+            return $this->belongsTo(Product::class);
+        }
 }

@@ -8,4 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+    ];
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function photos()
+    {
+        return $this->hasMany(ProductPhoto::class);
+    }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }
