@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use App\Http\Requests\StoreCompanyRequest;
 use App\Http\Requests\UpdateCompanyRequest;
+use App\Models\User;
 
 class CompanyController extends Controller
 {
@@ -29,7 +30,14 @@ class CompanyController extends Controller
      */
     public function store(StoreCompanyRequest $request)
     {
-        //
+
+        $company = Company::create($request->validated());
+
+        User::find(auth()->user()->id)->update([
+            'company_id' => $company->id
+        ]);
+
+        return redirect()->back();
     }
 
     /**
