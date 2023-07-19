@@ -13,7 +13,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('categories.index', [
+            'categories' => Category::where('company_id', auth()->user()->company_id)->get()
+        ]);
     }
 
     /**
