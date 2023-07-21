@@ -1,20 +1,28 @@
 <x-app-layout>
 
-    <div class="flex justify-between bg-gray-500 w-full p-8">
-        <div class="">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{__('Categories')}}
-            </h2>
-        </div>
-        <div class="">
-            <a href="{{route('categories.create')}}"
-                class="dark:text-gray-200 leading-tight">New Category</a>
+    <div class="w-full p-8 px-4 py-8 sm:p-8">
+        <div class="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 flex justify-between">
+            <div>
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                    {{__('Categories')}}
+                </h2>
+            </div>
+            <div class="">
+                <a href="{{route('categories.create')}}"
+                    class="leading-tight font-semibold">New Category</a>
+            </div>
         </div>
     </div>
 
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left text-gray-500 white:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 white:bg-gray-700 white:text-gray-400">
+    <div class="flex justify-center mt-4">
+        <div>
+            {{$categories->links()}}
+        </div>
+    </div>
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mx-auto max-w-7xl">
+        <table class="w-full text-sm text-left text-gray-800">
+            <thead class=" text-semibold text-xs text-gray-800 uppercase bg-gray-500">
                 <tr>
                     <th scope="col" class="px-6 py-3">
                         Name

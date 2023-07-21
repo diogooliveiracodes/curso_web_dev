@@ -14,6 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $company = \App\Models\Company::create([
+            'name' => 'Test Company',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        \App\Models\User::create([
+            'name'=>'Test User',
+            'email'=>'teste@email.com',
+            'password'=>bcrypt('123456789'),
+            'created_at'=> now(),
+            'updated_at'=>now(),
+            'company_id'=> $company->id
+        ]);
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -22,5 +37,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Category::factory(10)->create();
+        \App\Models\Product::factory(200)->create();
     }
 }
