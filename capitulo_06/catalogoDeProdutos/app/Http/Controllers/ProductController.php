@@ -23,7 +23,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('products.create', [
+            'categories'=> \App\Models\Category::where('company_id', auth()->user()->company_id)->get()
+        ]);
     }
 
     /**
@@ -31,14 +33,10 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        Product::create([
-            'name'=> $request->name,
-            'company_id' => auth()->user()->company_id,
-            'price' => $request->price,
-            'category_id'=>$request->category_id,
-            'description'=>$request->description,
+        $data = $request->validated();
+        $data['company_id'] = auth()->user()->company_id;
 
-        ]);
+        Product::create ($data);
 
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }

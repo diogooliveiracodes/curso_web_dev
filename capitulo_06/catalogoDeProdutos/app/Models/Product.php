@@ -14,11 +14,12 @@ class Product extends Model
             'category_id',
             'name',
             'description',
+            'price',
         ];
 
         public function company()
         {
-           return $this->belongsTo(Company::class); 
+           return $this->belongsTo(Company::class);
         }
 
         public function category()
