@@ -35,9 +35,18 @@
             <tbody>
                 @foreach($products as $product)
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 overflow-clip">
-                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal text-wrap dark:text-white">
-                        <a href="{{route('products.show', $product)}}">
-                            {{ $product->name }}
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal dark:text-white">
+                        <a href="{{ route('products.show', $product) }}">
+                            <div class="flex items-center space-x-4">
+                                @if($product->photos->count() > 0)
+                                <img src="{{ asset('storage/' . $product->photos->first()->path) }}"
+                                    alt="{{ $product->name }}" class="w-10 h-10 object-cover rounded-full">
+                                @else
+                                <img src="img/no-photo.png" alt="{{ $product->name }}"
+                                    class="w-10 h-10 object-cover rounded-full">
+                                @endif
+                                <span>{{ $product->name }}</span>
+                            </div>
                         </a>
                     </td>
                     <td class="px-6 py-4">

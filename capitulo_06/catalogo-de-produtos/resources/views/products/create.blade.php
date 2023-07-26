@@ -1,19 +1,19 @@
 <x-app-layout>
 
-    <div class="flex justify-between bg-gray-800 w-full p-8">
-        <div class="">
+    <div class="bg-gray-800 p-8">
+        <div class="sm:max-w-7xl mx-auto flex sm:px-4">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('Products') }}
             </h2>
         </div>
     </div>
 
-    <div class="mx-auto px-4">
-        <form action="{{route('products.store')}}" method="POST">
+    <div class="mx-auto px-4 sm:max-w-7xl">
+        <form action="{{route('products.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="relative mt-4 rounded-md shadow-sm">
                 {{-- NAME --}}
-                <input type="text" name="name" id="name"
+                <input type="text" name="name" id="name" required
                     class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300
                         placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     placeholder="Nome do Produto">
@@ -43,15 +43,21 @@
                     class="mt-4 block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300
                         placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     placeholder="Descrição do produto"></textarea>
+                {{-- IMAGE --}}
+                <input type="file" name="image[]" id="image" required placeholder="Imagem do produto" multiple
+                class="mt-4 block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300
+                placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="Imagem do produto" accept="image/png, image/jpeg">
             </div>
-            <div class="flex gap-x-4">
+            <div class="flex gap-x-4 pb-4">
                 <button class="bg-white mt-4 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400
                     rounded shadow"
                     type="submit">
                     Create
                 </button>
         </form>
-                <form action="{{route('products.index')}}" method="get"  onsubmit="return confirm('Tem certeza que deseja excluir esta categoria?')">
+                <form action="{{route('products.index')}}" method="get"
+                    onsubmit="return confirm('Tem certeza que deseja voltar?')">
                     <button href="{{route('products.index')}}"  onsubmit="return confirm('Tem certeza que deseja voltar?')"
                         class="bg-white mt-4 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
                         type="submit">
