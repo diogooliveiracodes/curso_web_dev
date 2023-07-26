@@ -35,11 +35,19 @@
             <tbody>
                 @foreach($products as $product)
                 <tr class="bg-white border-b white:bg-gray-800 white:border-gray-700 overflow-clip ">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal text-wrap" >
-                        <a href="{{route('categories.show', $product)}}">
-                            {{$product->name}}
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal text-wrap" >
+                        <a href="{{route('products.show', $product)}}">
+                            <div class="flex items-center space-x-4">
+                                @if($product->photos->count()>0)
+                                <img src="{{asset('storage/' . $product->photos->first()->path)}}"
+                                    alt="{{$product->name}}" class="w-10 h-10 object-cover rounded-full">
+                                @else
+                                <img src="img/no-photo.jpg" alt="{{$product->name}}"
+                                    class="w-10 h-10 object-cover rounded-full">
+                                @endif
+                            </div>
                         </a>
-                    </th>
+                    </td>
                     <td class="px-6 py-4 md:space-x-4">
                         <a href="{{route('products.edit', $product)}}" class="font-medium text-green-600 white:text-green-500">
                             EDIT

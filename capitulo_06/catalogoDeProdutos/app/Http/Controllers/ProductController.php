@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\ProductPhoto;
+use Ramsey\Uuid\Uuid;
 
 class ProductController extends Controller
 {
@@ -14,7 +16,9 @@ class ProductController extends Controller
     public function index()
     {
         return view('products.index', [
-            'products' => Product::where('company_id', auth()->user()->company_id)->paginate(20)
+            'products' => Product::where('company_id', auth()->user()->company_id)
+                ->orderByDesc('created_at')
+                ->paginate(20)
         ]);
     }
 
@@ -36,7 +40,20 @@ class ProductController extends Controller
         $data = $request->validated();
         $data['company_id'] = auth()->user()->company_id;
 
-        Product::create ($data);
+        $product = Product::create ($data);
+
+        if($request->hasFile('image')) {
+            foreach($request->file('image') as $image) {
+                $name = Uuid::uuid4().'.'.$image->extension();
+                $image->storeAs('public/'.$product->company_id.'/products/'.$product->id.'/'.$name);
+            ProductPhoto::create([
+                'companey_id' =>$product->company_id,
+                'product_id' => $product->id,
+                'name' => $name,
+                'path' => $product->company_id.'/products/'.$product->id.'/'.$name
+            ]);
+            }
+        }
 
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
@@ -47,7 +64,7 @@ class ProductController extends Controller
     public function show(string $id)
     {
         return view('products.show', [
-            'Product' => Product::findOrFail($id)
+            'product' => Product::findOrFail($id)
         ]);
     }
 
@@ -57,7 +74,7 @@ class ProductController extends Controller
     public function edit(string $id)
     {
         return view('products.edit', [
-            'Product' => Product::findOrFail($id)
+            'product' => Product::findOrFail($id)
         ]);
 
     }
@@ -79,5 +96,10 @@ class ProductController extends Controller
         Product::findOrFail($id)->delete();
 
         return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
+    }
+
+    public function destroyPhoto(int $id)
+    {
+        $photo = ProductPhoto::findOrFail($id);
     }
 }

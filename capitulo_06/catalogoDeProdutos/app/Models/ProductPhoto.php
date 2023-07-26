@@ -21,7 +21,7 @@ class ProductPhoto extends Model
             return $this->belongsTo(Company::class);
         }
 
-        public function products()
+        public function product()
         {
             return $this->belongsTo(Product::class);
         }
