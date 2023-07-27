@@ -32,5 +32,22 @@
                 {{ $slot }}
             </main>
         </div>
+        <script>
+            window.addEventListener('load', function() {
+                const price = document.querySelector('.price');
+                if(price){
+                    price.addEventListener('input', function(e) {
+                        let v = this.value;
+                        if (v.match(/^\d{1,8}(\.\d{0,2})?$/)) {
+                            this.previousValue = v;
+                        } else if (v === '') {
+                            this.previousValue = '';
+                        } else {
+                            this.value = this.previousValue !== undefined ? this.previousValue : '';
+                        }
+                    });
+                }
+            })
+        </script>
     </body>
 </html>

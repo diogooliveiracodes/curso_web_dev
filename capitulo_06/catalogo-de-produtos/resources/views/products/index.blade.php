@@ -4,19 +4,19 @@
         <div class="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 flex justify-between">
             <div>
                 <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                    {{ __('Categories') }}
+                    {{ __('Product') }}
                 </h2>
             </div>
             <div class="">
-                <a href="{{route('categories.create')}}"
-                class="dark:text-gray-200 leading-tight">New Category</a>
+                <a href="{{route('products.create')}}"
+                class="dark:text-gray-200 leading-tight">New Product</a>
             </div>
         </div>
     </div>
 
     <div class="flex justify-center mt-4">
         <div>
-            {{ $categories->links() }}
+            {{ $products->links() }}
         </div>
     </div>
 
@@ -33,20 +33,29 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($categories as $category)
+                @foreach($products as $product)
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 overflow-clip">
-                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal text-wrap dark:text-white">
-                        <a href="{{route('categories.show', $category)}}">
-                            {{ $category->name }}
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal dark:text-white">
+                        <a href="{{ route('products.show', $product) }}">
+                            <div class="flex items-center space-x-4">
+                                @if($product->photos->count() > 0)
+                                <img src="{{ asset('storage/' . $product->photos->first()->path) }}"
+                                    alt="{{ $product->name }}" class="w-10 h-10 object-cover rounded-full">
+                                @else
+                                <img src="img/no-photo.png" alt="{{ $product->name }}"
+                                    class="w-10 h-10 object-cover rounded-full">
+                                @endif
+                                <span>{{ $product->name }}</span>
+                            </div>
                         </a>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="{{route('categories.edit', $category->id)}}"
+                        <a href="{{route('products.edit', $product->id)}}"
                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                             Edit
                         </a>
-                        <form action="{{route('categories.destroy', $category)}}" method="post"
-                                onsubmit="return confirm('Tem certeza que deseja excluir esta categoria?')">
+                        <form action="{{route('products.destroy', $product)}}" method="post"
+                                onsubmit="return confirm('Tem certeza que deseja excluir este produto?')">
                                 @csrf
                                 @method('DELETE')
                             <button class="font-medium text-red-600 dark:text-red-500 hover:underline">
