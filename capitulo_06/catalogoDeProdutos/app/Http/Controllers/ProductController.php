@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Models\ProductPhoto;
+use Illuminate\Support\Facades\Storage;
 use Ramsey\Uuid\Uuid;
 
 class ProductController extends Controller
@@ -74,7 +75,8 @@ class ProductController extends Controller
     public function edit(string $id)
     {
         return view('products.edit', [
-            'product' => Product::findOrFail($id)
+            'product' => Product::findOrFail($id),
+            'categories' => \App\Models\Category::where('company_id', auth()->user()->company_id)->get()
         ]);
 
     }
@@ -82,8 +84,23 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductRequest $request, Product $Product)
-    {  $Product->update ($request->validated());
+    public function update(UpdateProductRequest $request, Product $product)
+    {  $product->update ($request->validated());
+
+        if($request->hasFile('image'))
+        {
+            foreach($request->file('image') as $image)
+            {
+                $name = Uuid::uuid4().'.'.$image->extension();
+                $image->storeAs('public/'.$product->company_id.'/products/'.$product->id.'/'.$name);
+            ProductPhoto::create([
+                'companey_id' =>$product->company_id,
+                'product_id' => $product->id,
+                'name' => $name,
+                'path' => $product->company_id.'/products/'.$product->id.'/'.$name
+            ]);
+            }
+        }
 
         return redirect()->route('products.index')->with('success', 'Product updated successfully.');
     }
@@ -101,5 +118,12 @@ class ProductController extends Controller
     public function destroyPhoto(int $id)
     {
         $photo = ProductPhoto::findOrFail($id);
+        $product = Product::findOrFail($photo->product_id);
+        Storage::delete('public/'.$photo->path);
+        $photo->delete();
+
+        return redirect()
+            ->route('products.edit', $product->id)
+            ->with('success', 'Photo deleted successfully.');
     }
 }
