@@ -48,7 +48,7 @@ class ProductController extends Controller
                 $name = Uuid::uuid4().'.'.$image->extension();
                 $image->storeAs('public/'.$product->company_id.'/products/'.$product->id.'/'.$name);
             ProductPhoto::create([
-                'companey_id' =>$product->company_id,
+                'company_id' =>$product->company_id,
                 'product_id' => $product->id,
                 'name' => $name,
                 'path' => $product->company_id.'/products/'.$product->id.'/'.$name
@@ -94,7 +94,7 @@ class ProductController extends Controller
                 $name = Uuid::uuid4().'.'.$image->extension();
                 $image->storeAs('public/'.$product->company_id.'/products/'.$product->id.'/'.$name);
             ProductPhoto::create([
-                'companey_id' =>$product->company_id,
+                'company_id' =>$product->company_id,
                 'product_id' => $product->id,
                 'name' => $name,
                 'path' => $product->company_id.'/products/'.$product->id.'/'.$name

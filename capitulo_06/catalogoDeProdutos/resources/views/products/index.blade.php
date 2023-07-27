@@ -22,7 +22,7 @@
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mx-auto max-w-7xl">
         <table class="w-full text-sm text-left text-gray-800">
-            <thead class=" text-semibold text-xs text-gray-800 uppercase bg-gray-500">
+            <thead class=" text-semibold text-xs text-gray-800 uppercase bg-gray-500 text-white">
                 <tr>
                     <th scope="col" class="px-6 py-3">
                         Name
@@ -32,10 +32,10 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-white">
                 @foreach($products as $product)
-                <tr class="bg-white border-b white:bg-gray-800 white:border-gray-700 overflow-clip ">
-                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal text-wrap" >
+                <tr class="border-b bg-gray-800 border-gray-700 overflow-clip text-white">
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-500 whitespace-normal dark:text-white">
                         <a href="{{route('products.show', $product)}}">
                             <div class="flex items-center space-x-4">
                                 @if($product->photos->count()>0)
@@ -43,21 +43,23 @@
                                     alt="{{$product->name}}" class="w-10 h-10 object-cover rounded-full">
                                 @else
                                 <img src="img/no-photo.jpg" alt="{{$product->name}}"
-                                    class="w-10 h-10 object-cover rounded-full">
+                                    class="w-10 h-10 object-cover rounded-full text-white">
                                 @endif
+                                <span>{{ $product->name }}</span>
                             </div>
                         </a>
                     </td>
-                    <td class="px-6 py-4 md:space-x-4">
-                        <a href="{{route('products.edit', $product)}}" class="font-medium text-green-600 white:text-green-500">
-                            EDIT
+                    <td class="px-6 py-4">
+                        <a href="{{route('products.edit', $product)}}"
+                            class="font-medium text-green-600 text-green-500 hover:underline">
+                                EDIT
                         </a>
                         <form action="{{route('products.destroy', $product)}}" method="POST"
                             onsubmit="return confirm('Tem certeza que deseja excluir este produto?')">
                             @csrf
                             @method('DELETE')
                             <button href="" class="font-medium text-red-600 white:text-red-500 hover:underline">
-                                DELETE
+                            DELETE
                             </button>
                         </form>
                     </td>

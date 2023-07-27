@@ -1,37 +1,37 @@
 <x-app-layout>
 
-    <div class=" bg-gray-800 p-8">
+    <div class=" bg-gray-800 p-8 text-white">
         <div class="sm:max-w-7xl mx-auto flex sm:px-4">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            <h2 class="font-semibold text-xl text-white-800 dark:text-gray-200 leading-tight">
                 {{ __('Products') }}
             </h2>
         </div>
     </div>
 
     <div class="mx-auto px-4 sm:max-w-7xl">
-        <div class="relative mt-4 rounded-md shadow-sm text-white">
+        <div class="relative mt-4 rounded-md shadow-sm text-dark">
             {{-- NAME --}}
             <div class="my-4">
                 <h2>Product Name:</h2>
-                <p class="text-gray-300 font-thin">{{ $product->name }}</p>
+                <p class="text-gray-500 font-thin">{{ $product->name }}</p>
             </div>
             <hr>
             {{-- CATEGORY --}}
             <div class="my-4">
                 <h2>Category:</h2>
-                <p class="text-gray-300 font-thin">{{ $product->category->name }}</p>
+                <p class="text-gray-500 font-thin">{{ $product->category->name }}</p>
             </div>
             <hr>
             {{-- PRICE --}}
             <div class="my-4">
                 <h2>Price:</h2>
-                <p class="text-gray-300 font-thin">R${{ number_format($product->price, 2, ',', '.') }}</p>
+                <p class="text-gray-500 font-thin">R${{ number_format($product->price, 2, ',', '.') }}</p>
             </div>
             <hr>
             {{-- DESCRIPTION --}}
             <div class="my-4">
                 <h2>Description:</h2>
-                <p class="text-gray-300 font-thin">{{ $product->description }}</p>
+                <p class="text-gray-500 font-thin">{{ $product->description }}</p>
             </div>
             <hr>
 
