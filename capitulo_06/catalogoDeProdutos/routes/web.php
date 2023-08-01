@@ -31,6 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('products', App\Http\Controllers\ProductController::class);
     Route::delete('products/photo/{id}', [App\Http\Controllers\ProductController::class, 'destroyPhoto'])
         ->name('products.photo.destroy');
+
 });
 
+Route::get('/{company_id}/store', [\App\Http\Controllers\PublicStoreController::class, 'index'])
+        ->name('store.index');
 require __DIR__.'/auth.php';
