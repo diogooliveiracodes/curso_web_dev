@@ -29,8 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('companies', \App\Http\Controllers\CompanyController::class);
     Route::resource('categories', \App\Http\Controllers\CategoryController::class);
     Route::resource('products', \App\Http\Controllers\ProductController::class);
-    ROute::delete('products/photo/{id}', [\App\Http\Controllers\ProductController::class, 'destroyPhoto'])
+    Route::delete('products/photo/{id}', [\App\Http\Controllers\ProductController::class, 'destroyPhoto'])
         ->name('products.photo.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::get('/{company_id}/store', [\App\Http\Controllers\PublicStoreController::class, 'index'])->name('store.index');
